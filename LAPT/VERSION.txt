@@ -1,0 +1,5 @@
+Portable bundle: HyDRO + validation-selected LAPT
+Bundle date: 2026-09-15
+Source: TAL_HyDRO_step28_SCLTC frozen experimental implementation
+Supported datasets: Computers, Photo, Cora
+Verified environment: Python 3.10.20, PyTorch 2.2.2+cu121, PyG 2.5.3

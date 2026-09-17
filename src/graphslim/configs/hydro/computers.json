@@ -1,0 +1,19 @@
+{
+  "lr_feat": 0.01,
+  "lr_adj": 0.01,
+  "beta": 0.1,
+  "weight_decay": 0.0,
+  "outer_loop": 10,
+  "inner_loop": 1,
+  "condense_model": "SGC",
+  "ntrans": 1,
+  "epochs": 600,
+  "hidden": 256,
+  "nlayers": 2,
+  "lr": 0.01,
+  "weight_decay_hyper": 0.0005,
+  "momentum": 0.01,
+  "curvature": -0.1,
+  "init": "random",
+  "condensed_selection_metric": "lp"
+}

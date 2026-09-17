@@ -1,0 +1,6 @@
+Step58 CA-LGM Gradient Compatibility Audit
+teacher_query_auc=0.83387542
+teacher_query_gap=1.80361366
+audit_rows=6
+adjacency: task_cosine_mean=0.38807473, condensation_cosine_mean=0.65275217, gradient_ratio_mean=2.09502247, conflict_rows=0/3
+feature: task_cosine_mean=-0.01708065, condensation_cosine_mean=0.05294824, gradient_ratio_mean=2.75797017, conflict_rows=1/3

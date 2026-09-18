@@ -1,0 +1,23 @@
+Step58-V1.1 full PGE-gradient trajectory audit
+teacher_query_auc=0.83387542
+teacher_query_gap=1.80361366
+audit_rows=300
+finite_rows=300
+rho=0.02000000
+lambda_max=0.05000000
+gradient_cosine_mean=-0.08862709
+gradient_cosine_median=-0.10818397
+gradient_cosine_min=-0.99053073
+gradient_cosine_max=0.93252242
+conflict_updates=176/300
+conflict_fraction=0.58666667
+hydro_gradient_norm_mean=1.04086941
+direction_gradient_norm_mean=0.11503910
+raw_gradient_ratio_mean=0.11980985
+lambda_effective_mean=0.02029966
+effective_gradient_ratio_mean=0.00255155
+effective_gradient_ratio_max=0.02000000
+recommended_conflict_control=pcgrad_candidate
+block_0_9: rows=100, cosine_mean=-0.11153137, conflicts=70/100, raw_ratio_mean=0.01988461, lambda_mean=0.01500000, effective_ratio_mean=0.00050813
+block_50_59: rows=100, cosine_mean=-0.14841057, conflicts=57/100, raw_ratio_mean=0.24064623, lambda_mean=0.02039898, effective_ratio_mean=0.00476869
+block_100_109: rows=100, cosine_mean=-0.00593934, conflicts=49/100, raw_ratio_mean=0.09889871, lambda_mean=0.02550000, effective_ratio_mean=0.00237784

@@ -1,0 +1,56 @@
+Step58 corrected 120-epoch paired pilot: HyDRO vs HyDRO+LGM V1
+
+Validity correction
+- The earlier V1 result (51.10 +/- 4.19) is invalid for method comparison.
+- Its checkpoint stored the normalized GCN propagation matrix as though it were
+  the raw condensed adjacency, so the evaluator processed the graph in the
+  wrong representation.
+- Training now uses the normalized matrix internally and serializes the raw PGE
+  adjacency, matching the HyDRO baseline and evaluator contract.
+
+Protocol
+- Dataset: Computers
+- Reduction rate: 0.005
+- Condensation seed: 1
+- Condensation epochs: 120
+- Checkpoints: epochs 60 and 120, selected only by validation Macro-F1
+- Final LP runs: 10 paired initialization runs
+- V1 intervention: positive/negative link gradient matching in PGE phases
+- LGM weight: 0.05
+- RankGM: disabled
+- LP-aware spectral modification: disabled
+
+Results
+- HyDRO test Macro-F1: 71.83 +/- 0.41 percent
+- Corrected HyDRO+LGM V1 test Macro-F1: 72.08 +/- 0.50 percent
+- Absolute mean difference: +0.25 percentage points
+- Paired wins: 6/10
+- Paired difference SD: 0.66 percentage points
+- Paired 95% CI: [-0.22, +0.72] percentage points
+- Paired t-test p-value: 0.257
+
+Checkpoint validation
+- HyDRO epoch 60: 69.40 +/- 1.00 percent
+- HyDRO epoch 120: 71.42 +/- 0.48 percent
+- Corrected V1 epoch 60: 70.27 +/- 0.28 percent
+- Corrected V1 epoch 120: 72.14 +/- 0.91 percent
+
+Corrected structure diagnostics
+- Baseline upper-triangle adjacency mean/std: 0.25760758 / 0.34307188
+- V1 upper-triangle adjacency mean/std: 0.26299274 / 0.33965179
+- Baseline adjacency maximum: 0.92282939
+- V1 adjacency maximum: 0.92936188
+- Raw adjacency relative Frobenius change: 2.84 percent
+- GCN-normalized propagation relative Frobenius change: 5.66 percent
+- GCN-normalized propagation cosine similarity: 0.998839
+- Feature relative Frobenius change: 22.36 percent
+
+Decision
+- The corrected V1 does not collapse the propagation structure.
+- Its mean Macro-F1 is +0.25 pp above the paired HyDRO pilot, but the 95% CI
+  crosses zero and only 6/10 runs improve; this is a positive but unconfirmed
+  pilot signal, not evidence of a stable improvement.
+- The old 51.10 result and the old 94.99/218.51 percent collapse claims must not
+  be used as evidence against CA-LGM.
+- A conflict-aware follow-up is justified, but it must be compared with this
+  corrected V1 rather than with the invalid checkpoint.

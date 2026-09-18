@@ -1,0 +1,350 @@
+Using device: cuda
+{'activation': 'relu',
+ 'agg': False,
+ 'alpha': 0.1,
+ 'attack': None,
+ 'batch_adj': 1,
+ 'beta': 0.1,
+ 'checkpoints': [-1, 11, 23, 35, 47, 59, 71, 83, 95, 107, 119],
+ 'coarsen_strategy': 'greedy',
+ 'condense_model': 'SGC',
+ 'condensed_selection_metric': 'lp',
+ 'curvature': -0.1,
+ 'dataset': 'computers',
+ 'device': 'cuda:0',
+ 'dis_metric': 'ours',
+ 'dropout': 0.0,
+ 'eigen_k': 60,
+ 'epochs': 120,
+ 'eval_epochs': 300,
+ 'eval_interval': 12,
+ 'eval_loss': 'CE',
+ 'eval_model': 'GCN',
+ 'eval_wd': 0.0,
+ 'eval_whole': False,
+ 'feat_alpha': 10,
+ 'final_eval_model': 'GCN',
+ 'gamma': 0.5,
+ 'gpu_id': 0,
+ 'hidden': 256,
+ 'init': 'random',
+ 'inner_loop': 1,
+ 'load_path': 'E:\\CODE\\LAPT -ONLY\\data',
+ 'logger': <Logger graphslim.config (INFO)>,
+ 'lp_decision_threshold': 0.5,
+ 'lp_epochs': 100,
+ 'lp_f1_average': 'macro',
+ 'lp_hidden': 128,
+ 'lp_lr': 0.001,
+ 'lp_neg_ratio': 1.0,
+ 'lp_syn_thresholds': 'q55,q65,q75,q85,q95',
+ 'lp_val_interval': 10,
+ 'lp_weight_decay': 0.0,
+ 'lr': 0.01,
+ 'lr_adj': 0.01,
+ 'lr_eigenvec': 0.01,
+ 'lr_feat': 0.01,
+ 'method': 'hydro',
+ 'metric': <function accuracy at 0x00000282E1206CB0>,
+ 'momentum': 0.01,
+ 'multi_label': False,
+ 'mx_size': 100,
+ 'nlayers': 2,
+ 'no_buff': False,
+ 'ntrans': 1,
+ 'optim': 'Adam',
+ 'outer_loop': 10,
+ 'paper_lapt_assignment_blends': '0.25,0.5,0.75,1.0',
+ 'paper_lapt_class_aware': True,
+ 'paper_lapt_fixed_lambda': 0.3,
+ 'paper_lapt_fixed_rank_blend': 0.0,
+ 'paper_lapt_hard_negative_ratio': 0.0,
+ 'paper_lapt_lambdas': '0,0.1,0.2,0.3,0.5,0.75,1.0',
+ 'paper_lapt_min_target_query_auc': 0.52,
+ 'paper_lapt_min_target_query_gap': 0.002,
+ 'paper_lapt_min_teacher_auc': 0.55,
+ 'paper_lapt_prototype_temperature': 0.1,
+ 'paper_lapt_proxy_epochs': 100,
+ 'paper_lapt_proxy_gate_z': 1.0,
+ 'paper_lapt_proxy_min_gain': 0.001,
+ 'paper_lapt_proxy_min_win_rate': 0.67,
+ 'paper_lapt_proxy_risk_weight': 0.5,
+ 'paper_lapt_proxy_runs': 3,
+ 'paper_lapt_proxy_split_seeds': '11,23,37',
+ 'paper_lapt_proxy_thresholds': 'q55,q65,q75,q85,q95',
+ 'paper_lapt_proxy_val_interval': 100,
+ 'paper_lapt_query_calibration_fraction': 0.5,
+ 'paper_lapt_query_ratio': 0.1,
+ 'paper_lapt_query_target_weight': 0.25,
+ 'paper_lapt_rank_blends': '0,0.5,1.0',
+ 'paper_lapt_selection_mode': 'validation',
+ 'paper_lapt_selection_tolerance': 0.001,
+ 'paper_lapt_sinkhorn_iter': 20,
+ 'paper_lapt_source_path': None,
+ 'paper_lapt_split_seed': 1,
+ 'paper_lapt_structure_blends': '0,0.25,0.5,0.75,1.0',
+ 'paper_lapt_structure_steps': 2,
+ 'paper_lapt_target_budget_fraction': 0.2,
+ 'paper_lapt_target_temperature': 0.5,
+ 'paper_lapt_teacher_batch_nodes': 256,
+ 'paper_lapt_teacher_batch_size': 2048,
+ 'paper_lapt_teacher_hidden': 32,
+ 'paper_lapt_teacher_lr': 0.01,
+ 'paper_lapt_teacher_pair_limit': 8192,
+ 'paper_lapt_teacher_steps': 200,
+ 'paper_lapt_test_ratio': 0.2,
+ 'paper_lapt_use_rank_calibration': True,
+ 'paper_lapt_use_structure_context': False,
+ 'paper_lapt_use_teacher': True,
+ 'paper_lapt_validation_ratio': 0.1,
+ 'paper_lapt_validation_runs': 3,
+ 'pre_norm': True,
+ 'ptb_r': 0.25,
+ 'ratio': 0.8,
+ 'reduction_rate': 0.005,
+ 'run_eval': 10,
+ 'run_inter_eval': 3,
+ 'run_reduction': 3,
+ 'save_path': 'E:\\CODE\\LAPT '
+              '-ONLY\\outputs\\step58_V1_1_GS_CALGM\\computers\\r_0.005\\full_gradient_audit\\seed_1\\unused_reduced_graph',
+ 'scltc_canonical_seed': 1,
+ 'scltc_eval_seed': 1,
+ 'scltc_fusion_blends': '0,0.25,0.5,0.75,1.0',
+ 'scltc_fusion_lapt_paths': None,
+ 'scltc_fusion_rctc_paths': None,
+ 'scltc_lambdas': '0,0.1,0.2,0.3,0.5,0.75,1.0',
+ 'scltc_local_agreement_margin': 0.02,
+ 'scltc_local_anchor_seed': 3,
+ 'scltc_local_fractions': '0.02,0.05,0.1',
+ 'scltc_local_lambdas': '0,0.25,0.5,1.0',
+ 'scltc_rank_blends': '0,0.5,1.0',
+ 'scltc_rank_fusion_lapt_paths': None,
+ 'scltc_rank_fusion_modes': 'mean_rank,rank_union,rank_intersection',
+ 'scltc_rank_fusion_rctc_paths': None,
+ 'scltc_rank_fusion_references': 'rctc,lapt',
+ 'scltc_risk_weight': 0.5,
+ 'scltc_router_lapt_paths': None,
+ 'scltc_router_raw_paths': None,
+ 'scltc_router_rctc_paths': None,
+ 'scltc_selection_tolerance': 0.001,
+ 'scltc_source_paths': None,
+ 'scltc_source_seeds': '1,2,3',
+ 'scltc_teacher_gate_fractions': '0.02,0.05,0.1,0.2',
+ 'scltc_teacher_gate_lapt_paths': None,
+ 'scltc_teacher_gate_pair_batch_size': 8192,
+ 'scltc_teacher_gate_rctc_paths': None,
+ 'scltc_teacher_gate_references': 'rctc,lapt',
+ 'scltc_validation_runs': 3,
+ 'seed': 1,
+ 'setting': 'trans',
+ 'smoothness_alpha': 0.1,
+ 'soft_label': 0,
+ 'spectral_objective': True,
+ 'split': 'fixed',
+ 'threshold': 0.0,
+ 'ts': 4,
+ 'verbose': False,
+ 'weight_decay': 0.0,
+ 'weight_decay_hyper': 0.0005,
+ 'with_bn': False,
+ 'with_structure': 1}
+yes,it is 
+train nodes num: 10996
+val nodes num: 1376
+test nodes num: 1380
+total nodes num: 13752
+target reduced size:54
+actual reduced size:54
+adj_syn: (54, 54) feat_syn: torch.Size([54, 767])
+feat_train torch.Size([10996, 767])
+adj_syn: (54, 54) feat_syn: torch.Size([54, 767])
+selected nodes: 54
+induced edges: 2
+Saved E:\CODE\LAPT -ONLY\outputs\step58_V1_1_GS_CALGM\computers\r_0.005\full_gradient_audit\seed_1\unused_reduced_graph/reduced_graph/random/adj_computers_0.005_1.pt
+Function Time: 0.004909700000098383 s
+Function Time: 4.909700000098383 ms
+Original graph:37.06 Mb  Condensed graph:0.17 Mb
+Step58-V1.1 trajectory teacher: query_auc=0.833875, query_gap=1.803614
+
+Step58-V1.1 audit:   0%|          | 0/120 [00:00<?, ?it/s]
+Step58-V1.1 audit epoch=0 C_mean=-0.064172 conflicts=6/10 ratio_mean=0.020201
+
+Step58-V1.1 audit:   1%|          | 1/120 [00:23<46:33, 23.47s/it]
+Step58-V1.1 audit epoch=1 C_mean=-0.187079 conflicts=9/10 ratio_mean=0.019325
+
+Step58-V1.1 audit:   2%|��         | 2/120 [00:27<23:09, 11.77s/it]
+Step58-V1.1 audit epoch=2 C_mean=0.134583 conflicts=0/10 ratio_mean=0.017343
+
+Step58-V1.1 audit:   2%|��         | 3/120 [00:30<15:43,  8.06s/it]
+Step58-V1.1 audit epoch=3 C_mean=-0.028899 conflicts=7/10 ratio_mean=0.022701
+
+Step58-V1.1 audit:   3%|��         | 4/120 [00:34<12:12,  6.31s/it]
+Step58-V1.1 audit epoch=4 C_mean=-0.145287 conflicts=9/10 ratio_mean=0.019878
+
+Step58-V1.1 audit:   4%|��         | 5/120 [00:38<10:16,  5.36s/it]
+Step58-V1.1 audit epoch=5 C_mean=-0.169233 conflicts=9/10 ratio_mean=0.015716
+
+Step58-V1.1 audit:   5%|��         | 6/120 [00:41<09:05,  4.79s/it]
+Step58-V1.1 audit epoch=6 C_mean=-0.078226 conflicts=7/10 ratio_mean=0.023248
+
+Step58-V1.1 audit:   6%|��         | 7/120 [00:45<08:17,  4.40s/it]
+Step58-V1.1 audit epoch=7 C_mean=-0.110644 conflicts=7/10 ratio_mean=0.027047
+
+Step58-V1.1 audit:   7%|��         | 8/120 [00:49<08:00,  4.29s/it]
+Step58-V1.1 audit epoch=8 C_mean=-0.109076 conflicts=6/10 ratio_mean=0.019348
+
+Step58-V1.1 audit:   8%|��         | 9/120 [00:53<07:39,  4.14s/it]
+Step58-V1.1 audit epoch=9 C_mean=-0.357281 conflicts=10/10 ratio_mean=0.014040
+
+Step58-V1.1 audit:   8%|��         | 10/120 [00:57<07:30,  4.10s/it]
+Step58-V1.1 audit:   9%|��         | 11/120 [01:00<06:58,  3.84s/it]
+Step58-V1.1 audit:  10%|��         | 12/120 [01:03<06:29,  3.60s/it]
+Step58-V1.1 audit:  11%|��         | 13/120 [01:06<06:11,  3.47s/it]
+Step58-V1.1 audit:  12%|����        | 14/120 [01:09<05:55,  3.35s/it]
+Step58-V1.1 audit:  12%|����        | 15/120 [01:12<05:45,  3.29s/it]
+Step58-V1.1 audit:  13%|����        | 16/120 [01:15<05:36,  3.24s/it]
+Step58-V1.1 audit:  14%|����        | 17/120 [01:19<05:27,  3.18s/it]
+Step58-V1.1 audit:  15%|����        | 18/120 [01:22<05:26,  3.20s/it]
+Step58-V1.1 audit:  16%|����        | 19/120 [01:25<05:18,  3.15s/it]
+Step58-V1.1 audit:  17%|����        | 20/120 [01:28<05:13,  3.14s/it]
+Step58-V1.1 audit:  18%|����        | 21/120 [01:31<05:08,  3.12s/it]
+Step58-V1.1 audit:  18%|����        | 22/120 [01:34<05:05,  3.12s/it]
+Step58-V1.1 audit:  19%|����        | 23/120 [01:37<05:06,  3.16s/it]
+Step58-V1.1 audit:  20%|����        | 24/120 [01:40<05:00,  3.13s/it]
+Step58-V1.1 audit:  21%|����        | 25/120 [01:43<04:55,  3.11s/it]
+Step58-V1.1 audit:  22%|������       | 26/120 [01:47<04:55,  3.15s/it]
+Step58-V1.1 audit:  22%|������       | 27/120 [01:50<04:51,  3.13s/it]
+Step58-V1.1 audit:  23%|������       | 28/120 [01:53<04:47,  3.12s/it]
+Step58-V1.1 audit:  24%|������       | 29/120 [01:56<04:43,  3.12s/it]
+Step58-V1.1 audit:  25%|������       | 30/120 [01:59<04:39,  3.11s/it]
+Step58-V1.1 audit:  26%|������       | 31/120 [02:02<04:38,  3.12s/it]
+Step58-V1.1 audit:  27%|������       | 32/120 [02:05<04:33,  3.11s/it]
+Step58-V1.1 audit:  28%|������       | 33/120 [02:09<04:32,  3.13s/it]
+Step58-V1.1 audit:  28%|������       | 34/120 [02:12<04:28,  3.12s/it]
+Step58-V1.1 audit:  29%|������       | 35/120 [02:15<04:28,  3.16s/it]
+Step58-V1.1 audit:  30%|������       | 36/120 [02:18<04:23,  3.14s/it]
+Step58-V1.1 audit:  31%|������       | 37/120 [02:21<04:22,  3.16s/it]
+Step58-V1.1 audit:  32%|��������      | 38/120 [02:24<04:15,  3.12s/it]
+Step58-V1.1 audit:  32%|��������      | 39/120 [02:27<04:15,  3.16s/it]
+Step58-V1.1 audit:  33%|��������      | 40/120 [02:30<04:10,  3.13s/it]
+Step58-V1.1 audit:  34%|��������      | 41/120 [02:34<04:09,  3.16s/it]
+Step58-V1.1 audit:  35%|��������      | 42/120 [02:37<04:03,  3.13s/it]
+Step58-V1.1 audit:  36%|��������      | 43/120 [02:40<04:01,  3.13s/it]
+Step58-V1.1 audit:  37%|��������      | 44/120 [02:43<03:58,  3.13s/it]
+Step58-V1.1 audit:  38%|��������      | 45/120 [02:46<03:54,  3.12s/it]
+Step58-V1.1 audit:  38%|��������      | 46/120 [02:49<03:53,  3.16s/it]
+Step58-V1.1 audit:  39%|��������      | 47/120 [02:53<03:50,  3.16s/it]
+Step58-V1.1 audit:  40%|��������      | 48/120 [02:56<03:47,  3.16s/it]
+Step58-V1.1 audit:  41%|��������      | 49/120 [02:59<03:42,  3.14s/it]
+Step58-V1.1 audit:  42%|����������     | 50/120 [03:02<03:41,  3.17s/it]
+Step58-V1.1 audit epoch=50 C_mean=-0.447036 conflicts=9/10 ratio_mean=0.086642
+
+Step58-V1.1 audit:  42%|����������     | 51/120 [03:06<03:50,  3.34s/it]
+Step58-V1.1 audit epoch=51 C_mean=-0.288426 conflicts=8/10 ratio_mean=0.242286
+
+Step58-V1.1 audit:  43%|����������     | 52/120 [03:10<04:03,  3.58s/it]
+Step58-V1.1 audit epoch=52 C_mean=-0.067738 conflicts=4/10 ratio_mean=0.212200
+
+Step58-V1.1 audit:  44%|����������     | 53/120 [03:14<04:05,  3.66s/it]
+Step58-V1.1 audit epoch=53 C_mean=-0.279413 conflicts=6/10 ratio_mean=0.253403
+
+Step58-V1.1 audit:  45%|����������     | 54/120 [03:18<04:05,  3.72s/it]
+Step58-V1.1 audit epoch=54 C_mean=-0.157002 conflicts=5/10 ratio_mean=0.273953
+
+Step58-V1.1 audit:  46%|����������     | 55/120 [03:21<04:02,  3.73s/it]
+Step58-V1.1 audit epoch=55 C_mean=0.056307 conflicts=4/10 ratio_mean=0.258518
+
+Step58-V1.1 audit:  47%|����������     | 56/120 [03:25<03:58,  3.73s/it]
+Step58-V1.1 audit epoch=56 C_mean=-0.162040 conflicts=6/10 ratio_mean=0.206836
+
+Step58-V1.1 audit:  48%|����������     | 57/120 [03:29<03:54,  3.72s/it]
+Step58-V1.1 audit epoch=57 C_mean=-0.029230 conflicts=4/10 ratio_mean=0.286845
+
+Step58-V1.1 audit:  48%|����������     | 58/120 [03:33<03:50,  3.71s/it]
+Step58-V1.1 audit epoch=58 C_mean=-0.061792 conflicts=4/10 ratio_mean=0.262196
+
+Step58-V1.1 audit:  49%|����������     | 59/120 [03:36<03:47,  3.72s/it]
+Step58-V1.1 audit epoch=59 C_mean=-0.047736 conflicts=7/10 ratio_mean=0.323584
+
+Step58-V1.1 audit:  50%|����������     | 60/120 [03:40<03:49,  3.82s/it]
+Step58-V1.1 audit:  51%|����������     | 61/120 [03:43<03:34,  3.63s/it]
+Step58-V1.1 audit:  52%|������������    | 62/120 [03:47<03:20,  3.46s/it]
+Step58-V1.1 audit:  52%|������������    | 63/120 [03:50<03:13,  3.39s/it]
+Step58-V1.1 audit:  53%|������������    | 64/120 [03:53<03:04,  3.29s/it]
+Step58-V1.1 audit:  54%|������������    | 65/120 [03:56<03:00,  3.28s/it]
+Step58-V1.1 audit:  55%|������������    | 66/120 [03:59<02:58,  3.30s/it]
+Step58-V1.1 audit:  56%|������������    | 67/120 [04:03<02:53,  3.27s/it]
+Step58-V1.1 audit:  57%|������������    | 68/120 [04:06<02:49,  3.25s/it]
+Step58-V1.1 audit:  57%|������������    | 69/120 [04:09<02:44,  3.22s/it]
+Step58-V1.1 audit:  58%|������������    | 70/120 [04:12<02:43,  3.28s/it]
+Step58-V1.1 audit:  59%|������������    | 71/120 [04:16<02:38,  3.23s/it]
+Step58-V1.1 audit:  60%|������������    | 72/120 [04:19<02:36,  3.27s/it]
+Step58-V1.1 audit:  61%|������������    | 73/120 [04:22<02:31,  3.23s/it]
+Step58-V1.1 audit:  62%|��������������   | 74/120 [04:25<02:29,  3.25s/it]
+Step58-V1.1 audit:  62%|��������������   | 75/120 [04:29<02:26,  3.27s/it]
+Step58-V1.1 audit:  63%|��������������   | 76/120 [04:32<02:21,  3.22s/it]
+Step58-V1.1 audit:  64%|��������������   | 77/120 [04:35<02:18,  3.21s/it]
+Step58-V1.1 audit:  65%|��������������   | 78/120 [04:38<02:15,  3.23s/it]
+Step58-V1.1 audit:  66%|��������������   | 79/120 [04:41<02:11,  3.21s/it]
+Step58-V1.1 audit:  67%|��������������   | 80/120 [04:45<02:10,  3.27s/it]
+Step58-V1.1 audit:  68%|��������������   | 81/120 [04:48<02:06,  3.24s/it]
+Step58-V1.1 audit:  68%|��������������   | 82/120 [04:51<02:05,  3.30s/it]
+Step58-V1.1 audit:  69%|��������������   | 83/120 [04:55<02:02,  3.32s/it]
+Step58-V1.1 audit:  70%|��������������   | 84/120 [04:58<02:01,  3.38s/it]
+Step58-V1.1 audit:  71%|��������������   | 85/120 [05:02<01:57,  3.36s/it]
+Step58-V1.1 audit:  72%|����������������  | 86/120 [05:05<01:51,  3.29s/it]
+Step58-V1.1 audit:  72%|����������������  | 87/120 [05:08<01:48,  3.28s/it]
+Step58-V1.1 audit:  73%|����������������  | 88/120 [05:11<01:43,  3.22s/it]
+Step58-V1.1 audit:  74%|����������������  | 89/120 [05:14<01:38,  3.19s/it]
+Step58-V1.1 audit:  75%|����������������  | 90/120 [05:17<01:35,  3.18s/it]
+Step58-V1.1 audit:  76%|����������������  | 91/120 [05:21<01:33,  3.21s/it]
+Step58-V1.1 audit:  77%|����������������  | 92/120 [05:24<01:28,  3.16s/it]
+Step58-V1.1 audit:  78%|����������������  | 93/120 [05:27<01:25,  3.17s/it]
+Step58-V1.1 audit:  78%|����������������  | 94/120 [05:30<01:23,  3.21s/it]
+Step58-V1.1 audit:  79%|����������������  | 95/120 [05:33<01:20,  3.21s/it]
+Step58-V1.1 audit:  80%|����������������  | 96/120 [05:37<01:17,  3.21s/it]
+Step58-V1.1 audit:  81%|����������������  | 97/120 [05:40<01:12,  3.15s/it]
+Step58-V1.1 audit:  82%|������������������ | 98/120 [05:43<01:10,  3.19s/it]
+Step58-V1.1 audit:  82%|������������������ | 99/120 [05:46<01:07,  3.24s/it]
+Step58-V1.1 audit:  83%|������������������ | 100/120 [05:49<01:03,  3.20s/it]
+Step58-V1.1 audit epoch=100 C_mean=0.260792 conflicts=3/10 ratio_mean=0.021605
+
+Step58-V1.1 audit:  84%|������������������ | 101/120 [05:53<01:04,  3.40s/it]
+Step58-V1.1 audit epoch=101 C_mean=-0.001057 conflicts=4/10 ratio_mean=0.040036
+
+Step58-V1.1 audit:  85%|������������������ | 102/120 [05:57<01:03,  3.54s/it]
+Step58-V1.1 audit epoch=102 C_mean=-0.057464 conflicts=5/10 ratio_mean=0.079347
+
+Step58-V1.1 audit:  86%|������������������ | 103/120 [06:01<01:02,  3.65s/it]
+Step58-V1.1 audit epoch=103 C_mean=-0.091739 conflicts=6/10 ratio_mean=0.097757
+
+Step58-V1.1 audit:  87%|������������������ | 104/120 [06:05<00:59,  3.69s/it]
+Step58-V1.1 audit epoch=104 C_mean=-0.089593 conflicts=6/10 ratio_mean=0.094389
+
+Step58-V1.1 audit:  88%|������������������ | 105/120 [06:09<00:56,  3.77s/it]
+Step58-V1.1 audit epoch=105 C_mean=-0.003666 conflicts=5/10 ratio_mean=0.137503
+
+Step58-V1.1 audit:  88%|������������������ | 106/120 [06:13<00:53,  3.80s/it]
+Step58-V1.1 audit epoch=106 C_mean=-0.018367 conflicts=5/10 ratio_mean=0.131109
+
+Step58-V1.1 audit:  89%|������������������ | 107/120 [06:16<00:49,  3.82s/it]
+Step58-V1.1 audit epoch=107 C_mean=-0.034193 conflicts=5/10 ratio_mean=0.127400
+
+Step58-V1.1 audit:  90%|������������������ | 108/120 [06:20<00:46,  3.85s/it]
+Step58-V1.1 audit epoch=108 C_mean=-0.037436 conflicts=5/10 ratio_mean=0.126421
+
+Step58-V1.1 audit:  91%|������������������ | 109/120 [06:24<00:42,  3.88s/it]
+Step58-V1.1 audit epoch=109 C_mean=0.013329 conflicts=5/10 ratio_mean=0.133420
+
+Step58-V1.1 audit:  92%|��������������������| 110/120 [06:28<00:38,  3.88s/it]
+Step58-V1.1 audit:  92%|��������������������| 111/120 [06:32<00:33,  3.75s/it]
+Step58-V1.1 audit:  93%|��������������������| 112/120 [06:35<00:28,  3.56s/it]
+Step58-V1.1 audit:  94%|��������������������| 113/120 [06:38<00:24,  3.44s/it]
+Step58-V1.1 audit:  95%|��������������������| 114/120 [06:41<00:20,  3.39s/it]
+Step58-V1.1 audit:  96%|��������������������| 115/120 [06:44<00:16,  3.32s/it]
+Step58-V1.1 audit:  97%|��������������������| 116/120 [06:48<00:13,  3.32s/it]
+Step58-V1.1 audit:  98%|��������������������| 117/120 [06:51<00:09,  3.29s/it]
+Step58-V1.1 audit:  98%|��������������������| 118/120 [06:54<00:06,  3.26s/it]
+Step58-V1.1 audit:  99%|��������������������| 119/120 [06:57<00:03,  3.23s/it]
+Step58-V1.1 audit: 100%|��������������������| 120/120 [07:01<00:00,  3.28s/it]
+Step58-V1.1 audit: 100%|��������������������| 120/120 [07:01<00:00,  3.51s/it]

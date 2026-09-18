@@ -22,3 +22,8 @@
 python run_pipeline.py --dataset computers --rate 0.005 --seed 1 --gpu 0 --epochs 120 --adj-points 0,50,100 --feat-points 10,60,110
 ```
 
+V1配对120轮实验（HyDRO与邻接阶段LGM，固定权重0.05）：
+
+```powershell
+python run_pipeline.py --stage pilot --dataset computers --rate 0.005 --seed 1 --gpu 0 --epochs 120 --eval-interval 60 --eval-runs 10 --lp-weight 0.05
+```

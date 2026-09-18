@@ -1,0 +1,68 @@
+Step58-V1.1 120-epoch paired pilot: gradient-safe CA-LGM
+
+Protocol
+- Dataset: Computers
+- Reduction rate: 0.005
+- Condensation seed: 1
+- Condensation epochs: 120
+- Checkpoints: epochs 60 and 120, selected only by validation Macro-F1
+- Final LP runs: 10 paired initialization runs
+- Link objective: positive/negative direction-only CA-LGM
+- Conflict control: PCGrad projection of link gradient against HyDRO gradient
+- Effective link-gradient ratio: rho=0.02 at every PGE update
+- Maximum scale: 5.0
+- RankGM: disabled
+- Propagation-budget penalty: disabled
+
+Macro-F1 results
+- HyDRO: 71.83 +/- 0.41 percent
+- Corrected V1 fixed-weight LGM: 72.08 +/- 0.50 percent
+- V1.1 gradient-safe CA-LGM: 72.14 +/- 0.24 percent
+
+V1.1 versus HyDRO paired result
+- Absolute mean difference: +0.31 percentage points
+- Per-run wins: 8/10
+- Paired difference SD: 0.33 percentage points
+- Paired 95% CI: [+0.07, +0.55] percentage points
+- Paired t-test p-value: 0.017
+
+V1.1 versus corrected V1
+- Absolute mean difference: +0.06 percentage points
+- Per-run wins: 6/10
+- Paired 95% CI: [-0.24, +0.35] percentage points
+- Paired t-test p-value: 0.668
+- The main observable benefit is reduced LP-run variance, not a confirmed mean
+  improvement over V1.
+
+Checkpoint validation
+- HyDRO epoch 60: 69.40 +/- 1.00 percent
+- HyDRO epoch 120: 71.42 +/- 0.48 percent
+- Corrected V1 epoch 60: 70.27 +/- 0.28 percent
+- Corrected V1 epoch 120: 72.14 +/- 0.91 percent
+- V1.1 epoch 60: 68.03 +/- 1.22 percent
+- V1.1 epoch 120: 72.04 +/- 0.43 percent
+
+Gradient diagnostics
+- PGE intervention updates: 300
+- Conflicting updates before projection: 189/300 (63.0 percent)
+- Mean pre-projection gradient cosine: -0.1020
+- Mean effective link-gradient ratio: 2.00 percent
+- Maximum effective link-gradient ratio: 2.00 percent
+
+Structure diagnostics relative to HyDRO
+- Raw adjacency relative Frobenius change: 2.06 percent
+- GCN-normalized propagation relative Frobenius change: 2.28 percent
+- GCN-normalized propagation cosine similarity: 0.999740
+- Feature relative Frobenius change: 15.76 percent
+- V1.1 adjacency upper-triangle mean/std: 0.25731844 / 0.34215927
+- V1.1 adjacency maximum: 0.92469120
+
+Interpretation and decision
+- V1.1 safely injects link-task gradients without materially disrupting HyDRO
+  propagation and produces a paired positive pilot result against HyDRO.
+- The 10 LP-run paired CI excludes zero, and variance is lower than both HyDRO
+  and corrected V1 under this single condensed graph.
+- This is not yet a general method claim: only Computers, R=0.005, condensation
+  seed 1, and 120 condensation epochs have been tested.
+- The correct next gate is a 600-epoch seed-1 comparison, followed by new
+  condensation seeds and other datasets only if that gate remains positive.

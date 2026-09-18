@@ -1,0 +1,16 @@
+Step58-V1.1 gradient-safe CA-LGM training complete
+epochs=120
+rho=0.02000000
+max_scale=5.00000000
+update_phase=adjacency_only
+conflict_control=pcgrad_link_against_hydro
+link_objective=positive_negative_direction_only
+teacher_query_auc=0.83387542
+teacher_query_gap=1.80361366
+gradient_updates=300
+conflict_updates=189
+conflict_fraction=0.63000000
+gradient_cosine_before_mean=-0.10203378
+effective_gradient_ratio_mean=0.02000000
+effective_gradient_ratio_max=0.02000000
+best_validation_f1=0.72044095

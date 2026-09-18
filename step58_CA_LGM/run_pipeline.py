@@ -91,8 +91,14 @@ def main() -> None:
         "--step58-distance-alpha",
         str(args.distance_alpha),
     ]
-    baseline_output = experiment_root / f"pilot_{args.epochs}" / "baseline"
-    v1_output = experiment_root / f"pilot_{args.epochs}" / "v1_lgm_w005"
+    # Condensation seeds are independent experimental units.  Keep every
+    # paired baseline/V1 run in its own directory so later seeds cannot
+    # overwrite logs, diagnostics, or selected condensed graphs from seed 1.
+    paired_output = (
+        experiment_root / f"pilot_{args.epochs}" / f"seed_{args.seed}"
+    )
+    baseline_output = paired_output / "baseline"
+    v1_output = paired_output / "v1_lgm_w005"
     common_training = [
         "-M", "hydro", "-D", args.dataset, "-R", _rate(args.rate),
         "--setting", "trans", "-G", str(args.gpu), "-S", str(args.seed),

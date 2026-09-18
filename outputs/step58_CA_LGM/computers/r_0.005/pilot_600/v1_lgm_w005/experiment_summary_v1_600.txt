@@ -1,0 +1,73 @@
+Step58 corrected V1 fixed-weight CA-LGM: 600-epoch analysis
+
+Protocol
+- Dataset: Computers
+- Reduction rate: 0.005
+- Condensation seed: 1
+- Condensation epochs: 600
+- Validation checkpoints: every 60 epochs
+- Final LP runs: 10 paired initialization runs
+- CA-LGM weight: 0.05
+- Link objective: positive and negative gradient direction plus magnitude
+- PCGrad: disabled
+- Dynamic gradient limiting: disabled
+- RankGM: disabled
+
+Results
+- HyDRO test Macro-F1: 73.57 +/- 1.52 percent
+- V1.1 gradient-safe CA-LGM: 73.41 +/- 0.71 percent
+- Corrected fixed-weight V1: 74.25 +/- 0.80 percent
+
+Corrected V1 versus HyDRO
+- Mean difference: +0.68 percentage points
+- Paired wins: 5/10
+- Paired 95% CI: [-0.17, +1.53] percentage points
+- Paired t-test p-value: 0.103
+- Standard deviation reduction: 47.2 percent
+- Correlation between HyDRO score and paired delta: -0.857
+- The mean improvement is promising but is not confirmed statistically on one
+  condensed graph.
+
+Corrected V1 versus V1.1
+- Mean difference: +0.84 percentage points
+- Paired wins: 9/10
+- Paired 95% CI: [+0.25, +1.42] percentage points
+- Paired t-test p-value: 0.010
+- PCGrad plus 2-percent limiting materially reduced the useful task signal.
+
+Validation trajectory
+- epoch 60: 69.69 +/- 0.45
+- epoch 120: 72.12 +/- 1.20
+- epoch 180: 71.26 +/- 0.41
+- epoch 240: 74.67 +/- 0.11 (selected best checkpoint)
+- epoch 300: 74.00 +/- 0.11
+- epoch 360: 72.97 +/- 0.73
+- epoch 420: 72.29 +/- 0.96
+- epoch 480: 74.09 +/- 0.62
+- epoch 540: 71.75 +/- 0.94
+- epoch 600: 74.54 +/- 1.56
+
+Structure relative to the paired HyDRO graph
+- Raw adjacency relative Frobenius change: 7.41 percent
+- GCN-normalized propagation relative Frobenius change: 2.68 percent
+- GCN-normalized propagation cosine similarity: 0.999648
+- Feature relative Frobenius change: 58.53 percent
+- The propagation graph remains close to HyDRO and does not collapse.
+
+Loss-scale diagnostics (not gradient-scale diagnostics)
+- PGE intervention updates: 1200
+- Mean weighted-LGM/node-GM loss ratio: 1.096
+- Median weighted-LGM/node-GM loss ratio: 0.690
+- Maximum weighted-LGM/node-GM loss ratio: 4.737
+- This ratio must not be interpreted as a gradient-norm ratio.
+
+Decision
+- Fixed-weight V1 is the current Step58 candidate because it improves mean F1
+  by 0.68 pp over HyDRO and clearly outperforms V1.1.
+- It has not yet established generality: the paired CI against HyDRO crosses
+  zero and only one condensation seed has been evaluated.
+- Freeze weight=0.05 and all protocol choices. Do not add RankGM, PCGrad, a
+  propagation budget, or tune the weight on seed 1.
+- The next experiment is external confirmation on condensation seeds 2 and 3
+  with their paired HyDRO baselines. Only after that should Photo/Cora or LAPT
+  composition be considered.

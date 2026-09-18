@@ -1,0 +1,7 @@
+Step58 V1 CA-LGM training complete
+epochs=600
+lp_weight=0.05
+update_phase=adjacency_only
+teacher_query_auc=0.83387542
+teacher_query_gap=1.80361390
+best_validation_f1=0.74674503

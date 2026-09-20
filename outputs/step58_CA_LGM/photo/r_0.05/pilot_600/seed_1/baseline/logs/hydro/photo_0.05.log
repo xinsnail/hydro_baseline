@@ -1,0 +1,206 @@
+2026-09-19 18:17:06,254 - graphslim.config - INFO - {'activation': 'relu',
+ 'agg': False,
+ 'alpha': 0.1,
+ 'attack': None,
+ 'batch_adj': 1,
+ 'beta': 0.1,
+ 'checkpoints': [-1, 59, 119, 179, 239, 299, 359, 419, 479, 539, 599],
+ 'coarsen_strategy': 'greedy',
+ 'condense_model': 'SGC',
+ 'condensed_selection_metric': 'lp',
+ 'curvature': -0.1,
+ 'dataset': 'photo',
+ 'device': 'cuda:0',
+ 'dis_metric': 'ours',
+ 'dropout': 0.0,
+ 'eigen_k': 60,
+ 'epochs': 600,
+ 'eval_epochs': 300,
+ 'eval_interval': 60,
+ 'eval_loss': 'CE',
+ 'eval_model': 'GCN',
+ 'eval_wd': 0.0,
+ 'eval_whole': False,
+ 'feat_alpha': 10,
+ 'final_eval_model': 'GCN',
+ 'gamma': 0.5,
+ 'gpu_id': 0,
+ 'hidden': 256,
+ 'init': 'random',
+ 'inner_loop': 1,
+ 'load_path': 'E:\\WX\\hydro_baseline\\data',
+ 'logger': <Logger graphslim.config (INFO)>,
+ 'lp_decision_threshold': 0.5,
+ 'lp_epochs': 100,
+ 'lp_f1_average': 'macro',
+ 'lp_hidden': 128,
+ 'lp_lr': 0.001,
+ 'lp_neg_ratio': 1.0,
+ 'lp_syn_thresholds': 'q55,q65,q75,q85,q95',
+ 'lp_val_interval': 10,
+ 'lp_weight_decay': 0.0,
+ 'lr': 0.01,
+ 'lr_adj': 0.01,
+ 'lr_eigenvec': 0.01,
+ 'lr_feat': 0.01,
+ 'method': 'hydro',
+ 'metric': <function accuracy at 0x0000017D02218040>,
+ 'momentum': 0.01,
+ 'multi_label': False,
+ 'mx_size': 100,
+ 'nlayers': 2,
+ 'no_buff': False,
+ 'ntrans': 1,
+ 'optim': 'Adam',
+ 'outer_loop': 10,
+ 'paper_lapt_assignment_blends': '0.25,0.5,0.75,1.0',
+ 'paper_lapt_class_aware': True,
+ 'paper_lapt_fixed_lambda': 0.3,
+ 'paper_lapt_fixed_rank_blend': 0.0,
+ 'paper_lapt_hard_negative_ratio': 0.0,
+ 'paper_lapt_lambdas': '0,0.1,0.2,0.3,0.5,0.75,1.0',
+ 'paper_lapt_min_target_query_auc': 0.52,
+ 'paper_lapt_min_target_query_gap': 0.002,
+ 'paper_lapt_min_teacher_auc': 0.55,
+ 'paper_lapt_prototype_temperature': 0.1,
+ 'paper_lapt_proxy_epochs': 100,
+ 'paper_lapt_proxy_gate_z': 1.0,
+ 'paper_lapt_proxy_min_gain': 0.001,
+ 'paper_lapt_proxy_min_win_rate': 0.67,
+ 'paper_lapt_proxy_risk_weight': 0.5,
+ 'paper_lapt_proxy_runs': 3,
+ 'paper_lapt_proxy_split_seeds': '11,23,37',
+ 'paper_lapt_proxy_thresholds': 'q55,q65,q75,q85,q95',
+ 'paper_lapt_proxy_val_interval': 100,
+ 'paper_lapt_query_calibration_fraction': 0.5,
+ 'paper_lapt_query_ratio': 0.1,
+ 'paper_lapt_query_target_weight': 0.25,
+ 'paper_lapt_rank_blends': '0,0.5,1.0',
+ 'paper_lapt_selection_mode': 'validation',
+ 'paper_lapt_selection_tolerance': 0.001,
+ 'paper_lapt_sinkhorn_iter': 20,
+ 'paper_lapt_source_path': None,
+ 'paper_lapt_split_seed': 1,
+ 'paper_lapt_structure_blends': '0,0.25,0.5,0.75,1.0',
+ 'paper_lapt_structure_steps': 2,
+ 'paper_lapt_target_budget_fraction': 0.2,
+ 'paper_lapt_target_temperature': 0.5,
+ 'paper_lapt_teacher_batch_nodes': 256,
+ 'paper_lapt_teacher_batch_size': 2048,
+ 'paper_lapt_teacher_hidden': 32,
+ 'paper_lapt_teacher_lr': 0.01,
+ 'paper_lapt_teacher_pair_limit': 8192,
+ 'paper_lapt_teacher_steps': 200,
+ 'paper_lapt_test_ratio': 0.2,
+ 'paper_lapt_use_rank_calibration': True,
+ 'paper_lapt_use_structure_context': False,
+ 'paper_lapt_use_teacher': True,
+ 'paper_lapt_validation_ratio': 0.1,
+ 'paper_lapt_validation_runs': 3,
+ 'pre_norm': True,
+ 'ptb_r': 0.25,
+ 'ratio': 0.8,
+ 'reduction_rate': 0.05,
+ 'run_eval': 10,
+ 'run_inter_eval': 3,
+ 'run_reduction': 3,
+ 'save_path': 'E:\\WX\\hydro_baseline\\outputs\\step58_CA_LGM\\photo\\r_0.05\\pilot_600\\seed_1\\baseline',
+ 'scltc_canonical_seed': 1,
+ 'scltc_eval_seed': 1,
+ 'scltc_fusion_blends': '0,0.25,0.5,0.75,1.0',
+ 'scltc_fusion_lapt_paths': None,
+ 'scltc_fusion_rctc_paths': None,
+ 'scltc_lambdas': '0,0.1,0.2,0.3,0.5,0.75,1.0',
+ 'scltc_local_agreement_margin': 0.02,
+ 'scltc_local_anchor_seed': 3,
+ 'scltc_local_fractions': '0.02,0.05,0.1',
+ 'scltc_local_lambdas': '0,0.25,0.5,1.0',
+ 'scltc_rank_blends': '0,0.5,1.0',
+ 'scltc_rank_fusion_lapt_paths': None,
+ 'scltc_rank_fusion_modes': 'mean_rank,rank_union,rank_intersection',
+ 'scltc_rank_fusion_rctc_paths': None,
+ 'scltc_rank_fusion_references': 'rctc,lapt',
+ 'scltc_risk_weight': 0.5,
+ 'scltc_router_lapt_paths': None,
+ 'scltc_router_raw_paths': None,
+ 'scltc_router_rctc_paths': None,
+ 'scltc_selection_tolerance': 0.001,
+ 'scltc_source_paths': None,
+ 'scltc_source_seeds': '1,2,3',
+ 'scltc_teacher_gate_fractions': '0.02,0.05,0.1,0.2',
+ 'scltc_teacher_gate_lapt_paths': None,
+ 'scltc_teacher_gate_pair_batch_size': 8192,
+ 'scltc_teacher_gate_rctc_paths': None,
+ 'scltc_teacher_gate_references': 'rctc,lapt',
+ 'scltc_validation_runs': 3,
+ 'seed': 1,
+ 'setting': 'trans',
+ 'smoothness_alpha': 0.1,
+ 'soft_label': 0,
+ 'spectral_objective': True,
+ 'split': 'fixed',
+ 'threshold': 0.0,
+ 'ts': 4,
+ 'verbose': False,
+ 'weight_decay': 0.0,
+ 'weight_decay_hyper': 0.0005,
+ 'with_bn': False,
+ 'with_structure': 1}
+2026-09-19 18:17:07,993 - graphslim.config - INFO - Saved E:\WX\hydro_baseline\outputs\step58_CA_LGM\photo\r_0.05\pilot_600\seed_1\baseline/reduced_graph/random/adj_photo_0.05_1.pt
+2026-09-19 18:22:11,475 - graphslim.config - INFO - LP validation mean F1: 69.08 +/- 0.79
+2026-09-19 18:22:11,475 - graphslim.config - INFO - LP checkpoint validation F1: 69.0759 (best 0.0000)
+2026-09-19 18:22:11,486 - graphslim.config - INFO - Saved E:\WX\hydro_baseline\outputs\step58_CA_LGM\photo\r_0.05\pilot_600\seed_1\baseline/reduced_graph/hydro/adj_photo_0.05_1.pt
+2026-09-19 18:27:08,187 - graphslim.config - INFO - LP validation mean F1: 71.14 +/- 2.07
+2026-09-19 18:27:08,187 - graphslim.config - INFO - LP checkpoint validation F1: 71.1448 (best 69.0759)
+2026-09-19 18:27:08,192 - graphslim.config - INFO - Saved E:\WX\hydro_baseline\outputs\step58_CA_LGM\photo\r_0.05\pilot_600\seed_1\baseline/reduced_graph/hydro/adj_photo_0.05_1.pt
+2026-09-19 18:33:02,749 - graphslim.config - INFO - LP validation mean F1: 72.19 +/- 1.25
+2026-09-19 18:33:02,749 - graphslim.config - INFO - LP checkpoint validation F1: 72.1914 (best 71.1448)
+2026-09-19 18:33:02,754 - graphslim.config - INFO - Saved E:\WX\hydro_baseline\outputs\step58_CA_LGM\photo\r_0.05\pilot_600\seed_1\baseline/reduced_graph/hydro/adj_photo_0.05_1.pt
+2026-09-19 18:38:01,578 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:38:04,377 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:38:07,206 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:38:09,857 - graphslim.config - INFO - LP validation mean F1: 71.86 +/- 2.33
+2026-09-19 18:38:09,857 - graphslim.config - INFO - LP checkpoint validation F1: 71.8581 (best 72.1914)
+2026-09-19 18:42:46,813 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:42:49,615 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:42:52,414 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:42:55,007 - graphslim.config - INFO - LP validation mean F1: 74.49 +/- 0.49
+2026-09-19 18:42:55,008 - graphslim.config - INFO - LP checkpoint validation F1: 74.4912 (best 72.1914)
+2026-09-19 18:42:55,011 - graphslim.config - INFO - Saved E:\WX\hydro_baseline\outputs\step58_CA_LGM\photo\r_0.05\pilot_600\seed_1\baseline/reduced_graph/hydro/adj_photo_0.05_1.pt
+2026-09-19 18:47:30,924 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:47:32,337 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:47:33,801 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:47:35,093 - graphslim.config - INFO - LP validation mean F1: 73.95 +/- 0.73
+2026-09-19 18:47:35,093 - graphslim.config - INFO - LP checkpoint validation F1: 73.9536 (best 74.4912)
+2026-09-19 18:52:06,748 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:52:08,843 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:52:10,952 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:52:12,936 - graphslim.config - INFO - LP validation mean F1: 74.71 +/- 1.54
+2026-09-19 18:52:12,936 - graphslim.config - INFO - LP checkpoint validation F1: 74.7080 (best 74.4912)
+2026-09-19 18:52:12,940 - graphslim.config - INFO - Saved E:\WX\hydro_baseline\outputs\step58_CA_LGM\photo\r_0.05\pilot_600\seed_1\baseline/reduced_graph/hydro/adj_photo_0.05_1.pt
+2026-09-19 18:56:43,489 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:56:45,556 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:56:47,659 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 18:56:49,559 - graphslim.config - INFO - LP validation mean F1: 74.41 +/- 1.13
+2026-09-19 18:56:49,559 - graphslim.config - INFO - LP checkpoint validation F1: 74.4136 (best 74.7080)
+2026-09-19 19:01:19,167 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:01:21,214 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:01:23,307 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:01:25,275 - graphslim.config - INFO - LP validation mean F1: 73.86 +/- 0.45
+2026-09-19 19:01:25,275 - graphslim.config - INFO - LP checkpoint validation F1: 73.8603 (best 74.7080)
+2026-09-19 19:05:53,865 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:05:55,290 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:05:56,794 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:05:58,117 - graphslim.config - INFO - LP validation mean F1: 74.40 +/- 0.70
+2026-09-19 19:05:58,117 - graphslim.config - INFO - LP checkpoint validation F1: 74.4045 (best 74.7080)
+2026-09-19 19:05:58,315 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:00,458 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:02,640 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:04,763 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:06,849 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:08,989 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:11,074 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:13,207 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:15,286 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:17,397 - graphslim.config - WARNING - Skipping synthetic threshold 0.04110594838857651: 46360 positives but only 0 negative candidates
+2026-09-19 19:06:19,337 - graphslim.config - INFO - LP test mean F1: 73.69 +/- 1.51 (validation 73.72 +/- 1.54)

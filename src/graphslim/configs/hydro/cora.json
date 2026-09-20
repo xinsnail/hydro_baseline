@@ -7,6 +7,7 @@
   "outer_loop": 20,
   "inner_loop": 15,
   "condense_model": "SGC",
+  "condensed_selection_metric": "lp",
   "ntrans": 1,
   "epochs": 600,
   "mx_size": 200,

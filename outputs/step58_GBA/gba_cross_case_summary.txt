@@ -1,0 +1,4 @@
+Step58-GBA descriptive cross-case summary
+complete_cases=3/4
+formal_correlation_test=false
+interpretation=compare ratio and cosine patterns descriptively; do not tune a running case from these diagnostics

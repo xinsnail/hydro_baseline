@@ -1,0 +1,22 @@
+Step58-GBA fixed CA-LGM gradient behavior audit
+diagnostic_only=true
+gradient_parameters=PGE_only
+epochs=600
+lp_weight=0.05000000
+audit_outer=0
+teacher_query_auc=0.81203502
+teacher_query_gap=1.89387846
+best_validation_f1=0.66303153
+samples_total=120
+samples_finite=120
+ratio_mean=0.01220481
+ratio_median=0.01083301
+ratio_std=0.00943492
+ratio_p90=0.02052392
+ratio_p95=0.02461142
+ratio_max=0.05857668
+cosine_mean=-0.05677426
+cosine_median=-0.01337502
+cosine_min=-0.91031221
+cosine_max=0.91542599
+conflict_fraction=0.50833333

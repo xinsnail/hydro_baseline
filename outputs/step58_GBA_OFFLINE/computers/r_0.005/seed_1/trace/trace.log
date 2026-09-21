@@ -1,0 +1,804 @@
+Using device: cuda
+{'activation': 'relu',
+ 'agg': False,
+ 'alpha': 0.1,
+ 'attack': None,
+ 'batch_adj': 1,
+ 'beta': 0.1,
+ 'checkpoints': [-1, 59, 119, 179, 239, 299, 359, 419, 479, 539, 599],
+ 'coarsen_strategy': 'greedy',
+ 'condense_model': 'SGC',
+ 'condensed_selection_metric': 'lp',
+ 'curvature': -0.1,
+ 'dataset': 'computers',
+ 'device': 'cuda:0',
+ 'dis_metric': 'ours',
+ 'dropout': 0.0,
+ 'eigen_k': 60,
+ 'epochs': 600,
+ 'eval_epochs': 300,
+ 'eval_interval': 60,
+ 'eval_loss': 'CE',
+ 'eval_model': 'GCN',
+ 'eval_wd': 0.0,
+ 'eval_whole': False,
+ 'feat_alpha': 10,
+ 'final_eval_model': 'GCN',
+ 'gamma': 0.5,
+ 'gpu_id': 0,
+ 'hidden': 256,
+ 'init': 'random',
+ 'inner_loop': 1,
+ 'load_path': 'E:\\WX\\hydro_baseline\\data',
+ 'logger': <Logger graphslim.config (INFO)>,
+ 'lp_decision_threshold': 0.5,
+ 'lp_epochs': 100,
+ 'lp_f1_average': 'macro',
+ 'lp_hidden': 128,
+ 'lp_lr': 0.001,
+ 'lp_neg_ratio': 1.0,
+ 'lp_syn_thresholds': 'q55,q65,q75,q85,q95',
+ 'lp_val_interval': 10,
+ 'lp_weight_decay': 0.0,
+ 'lr': 0.01,
+ 'lr_adj': 0.01,
+ 'lr_eigenvec': 0.01,
+ 'lr_feat': 0.01,
+ 'method': 'hydro',
+ 'metric': <function accuracy at 0x0000020AD7BC0310>,
+ 'momentum': 0.01,
+ 'multi_label': False,
+ 'mx_size': 100,
+ 'nlayers': 2,
+ 'no_buff': False,
+ 'ntrans': 1,
+ 'optim': 'Adam',
+ 'outer_loop': 10,
+ 'paper_lapt_assignment_blends': '0.25,0.5,0.75,1.0',
+ 'paper_lapt_class_aware': True,
+ 'paper_lapt_fixed_lambda': 0.3,
+ 'paper_lapt_fixed_rank_blend': 0.0,
+ 'paper_lapt_hard_negative_ratio': 0.0,
+ 'paper_lapt_lambdas': '0,0.1,0.2,0.3,0.5,0.75,1.0',
+ 'paper_lapt_min_target_query_auc': 0.52,
+ 'paper_lapt_min_target_query_gap': 0.002,
+ 'paper_lapt_min_teacher_auc': 0.55,
+ 'paper_lapt_prototype_temperature': 0.1,
+ 'paper_lapt_proxy_epochs': 100,
+ 'paper_lapt_proxy_gate_z': 1.0,
+ 'paper_lapt_proxy_min_gain': 0.001,
+ 'paper_lapt_proxy_min_win_rate': 0.67,
+ 'paper_lapt_proxy_risk_weight': 0.5,
+ 'paper_lapt_proxy_runs': 3,
+ 'paper_lapt_proxy_split_seeds': '11,23,37',
+ 'paper_lapt_proxy_thresholds': 'q55,q65,q75,q85,q95',
+ 'paper_lapt_proxy_val_interval': 100,
+ 'paper_lapt_query_calibration_fraction': 0.5,
+ 'paper_lapt_query_ratio': 0.1,
+ 'paper_lapt_query_target_weight': 0.25,
+ 'paper_lapt_rank_blends': '0,0.5,1.0',
+ 'paper_lapt_selection_mode': 'validation',
+ 'paper_lapt_selection_tolerance': 0.001,
+ 'paper_lapt_sinkhorn_iter': 20,
+ 'paper_lapt_source_path': None,
+ 'paper_lapt_split_seed': 1,
+ 'paper_lapt_structure_blends': '0,0.25,0.5,0.75,1.0',
+ 'paper_lapt_structure_steps': 2,
+ 'paper_lapt_target_budget_fraction': 0.2,
+ 'paper_lapt_target_temperature': 0.5,
+ 'paper_lapt_teacher_batch_nodes': 256,
+ 'paper_lapt_teacher_batch_size': 2048,
+ 'paper_lapt_teacher_hidden': 32,
+ 'paper_lapt_teacher_lr': 0.01,
+ 'paper_lapt_teacher_pair_limit': 8192,
+ 'paper_lapt_teacher_steps': 200,
+ 'paper_lapt_test_ratio': 0.2,
+ 'paper_lapt_use_rank_calibration': True,
+ 'paper_lapt_use_structure_context': False,
+ 'paper_lapt_use_teacher': True,
+ 'paper_lapt_validation_ratio': 0.1,
+ 'paper_lapt_validation_runs': 3,
+ 'pre_norm': True,
+ 'ptb_r': 0.25,
+ 'ratio': 0.8,
+ 'reduction_rate': 0.005,
+ 'run_eval': 10,
+ 'run_inter_eval': 3,
+ 'run_reduction': 3,
+ 'save_path': 'E:\\WX\\hydro_baseline\\outputs\\step58_GBA_OFFLINE\\computers\\r_0.005\\seed_1\\trace',
+ 'scltc_canonical_seed': 1,
+ 'scltc_eval_seed': 1,
+ 'scltc_fusion_blends': '0,0.25,0.5,0.75,1.0',
+ 'scltc_fusion_lapt_paths': None,
+ 'scltc_fusion_rctc_paths': None,
+ 'scltc_lambdas': '0,0.1,0.2,0.3,0.5,0.75,1.0',
+ 'scltc_local_agreement_margin': 0.02,
+ 'scltc_local_anchor_seed': 3,
+ 'scltc_local_fractions': '0.02,0.05,0.1',
+ 'scltc_local_lambdas': '0,0.25,0.5,1.0',
+ 'scltc_rank_blends': '0,0.5,1.0',
+ 'scltc_rank_fusion_lapt_paths': None,
+ 'scltc_rank_fusion_modes': 'mean_rank,rank_union,rank_intersection',
+ 'scltc_rank_fusion_rctc_paths': None,
+ 'scltc_rank_fusion_references': 'rctc,lapt',
+ 'scltc_risk_weight': 0.5,
+ 'scltc_router_lapt_paths': None,
+ 'scltc_router_raw_paths': None,
+ 'scltc_router_rctc_paths': None,
+ 'scltc_selection_tolerance': 0.001,
+ 'scltc_source_paths': None,
+ 'scltc_source_seeds': '1,2,3',
+ 'scltc_teacher_gate_fractions': '0.02,0.05,0.1,0.2',
+ 'scltc_teacher_gate_lapt_paths': None,
+ 'scltc_teacher_gate_pair_batch_size': 8192,
+ 'scltc_teacher_gate_rctc_paths': None,
+ 'scltc_teacher_gate_references': 'rctc,lapt',
+ 'scltc_validation_runs': 3,
+ 'seed': 1,
+ 'setting': 'trans',
+ 'smoothness_alpha': 0.1,
+ 'soft_label': 0,
+ 'spectral_objective': True,
+ 'split': 'fixed',
+ 'threshold': 0.0,
+ 'ts': 4,
+ 'verbose': False,
+ 'weight_decay': 0.0,
+ 'weight_decay_hyper': 0.0005,
+ 'with_bn': False,
+ 'with_structure': 1}
+yes,it is 
+train nodes num: 10996
+val nodes num: 1376
+test nodes num: 1380
+total nodes num: 13752
+target reduced size:54
+actual reduced size:54
+adj_syn: (54, 54) feat_syn: torch.Size([54, 767])
+feat_train torch.Size([10996, 767])
+adj_syn: (54, 54) feat_syn: torch.Size([54, 767])
+selected nodes: 54
+induced edges: 2
+Saved E:\WX\hydro_baseline\outputs\step58_GBA_OFFLINE\computers\r_0.005\seed_1\trace/reduced_graph/random/adj_computers_0.005_1.pt
+Function Time: 0.008337500039488077 s
+Function Time: 8.337500039488077 ms
+Original graph:37.06 Mb  Condensed graph:0.17 Mb
+Step58-GBA-v2 snapshot-only CA-LGM: query_auc=0.833875, query_gap=1.803614, lp_weight=0.050000, trace_points=[0, 1, 51, 101, 151, 201, 251, 301, 351, 401, 451, 501, 551]
+
+Step58-GBA-v2 trace:   0%|          | 0/600 [00:00<?, ?it/s]
+Step58-GBA-v2 trace:   0%|          | 1/600 [00:22<3:43:49, 22.42s/it]
+Step58-GBA-v2 trace:   0%|          | 2/600 [00:25<1:49:57, 11.03s/it]
+Step58-GBA-v2 trace:   0%|          | 3/600 [00:28<1:11:43,  7.21s/it]
+Step58-GBA-v2 trace:   1%|          | 4/600 [00:30<53:44,  5.41s/it]  
+Step58-GBA-v2 trace:   1%|          | 5/600 [00:33<43:55,  4.43s/it]
+Step58-GBA-v2 trace:   1%|          | 6/600 [00:36<37:56,  3.83s/it]
+Step58-GBA-v2 trace:   1%|          | 7/600 [00:38<34:11,  3.46s/it]
+Step58-GBA-v2 trace:   1%|▏         | 8/600 [00:41<31:32,  3.20s/it]
+Step58-GBA-v2 trace:   2%|▏         | 9/600 [00:44<29:47,  3.02s/it]
+Step58-GBA-v2 trace:   2%|▏         | 10/600 [00:46<28:46,  2.93s/it]
+Step58-GBA-v2 trace:   2%|▏         | 11/600 [00:49<27:26,  2.80s/it]
+Step58-GBA-v2 trace:   2%|▏         | 12/600 [00:51<26:55,  2.75s/it]
+Step58-GBA-v2 trace:   2%|▏         | 13/600 [00:54<26:20,  2.69s/it]
+Step58-GBA-v2 trace:   2%|▏         | 14/600 [00:57<25:59,  2.66s/it]
+Step58-GBA-v2 trace:   2%|▎         | 15/600 [00:59<25:37,  2.63s/it]
+Step58-GBA-v2 trace:   3%|▎         | 16/600 [01:02<25:23,  2.61s/it]
+Step58-GBA-v2 trace:   3%|▎         | 17/600 [01:04<25:17,  2.60s/it]
+Step58-GBA-v2 trace:   3%|▎         | 18/600 [01:07<25:00,  2.58s/it]
+Step58-GBA-v2 trace:   3%|▎         | 19/600 [01:09<24:50,  2.57s/it]
+Step58-GBA-v2 trace:   3%|▎         | 20/600 [01:12<24:46,  2.56s/it]
+Step58-GBA-v2 trace:   4%|▎         | 21/600 [01:15<24:45,  2.57s/it]
+Step58-GBA-v2 trace:   4%|▎         | 22/600 [01:17<24:34,  2.55s/it]
+Step58-GBA-v2 trace:   4%|▍         | 23/600 [01:20<24:38,  2.56s/it]
+Step58-GBA-v2 trace:   4%|▍         | 24/600 [01:22<24:41,  2.57s/it]
+Step58-GBA-v2 trace:   4%|▍         | 25/600 [01:25<24:51,  2.59s/it]
+Step58-GBA-v2 trace:   4%|▍         | 26/600 [01:27<24:42,  2.58s/it]
+Step58-GBA-v2 trace:   4%|▍         | 27/600 [01:30<24:32,  2.57s/it]
+Step58-GBA-v2 trace:   5%|▍         | 28/600 [01:33<24:32,  2.57s/it]
+Step58-GBA-v2 trace:   5%|▍         | 29/600 [01:35<24:23,  2.56s/it]
+Step58-GBA-v2 trace:   5%|▌         | 30/600 [01:38<24:15,  2.55s/it]
+Step58-GBA-v2 trace:   5%|▌         | 31/600 [01:40<24:13,  2.55s/it]
+Step58-GBA-v2 trace:   5%|▌         | 32/600 [01:43<24:15,  2.56s/it]
+Step58-GBA-v2 trace:   6%|▌         | 33/600 [01:45<24:16,  2.57s/it]
+Step58-GBA-v2 trace:   6%|▌         | 34/600 [01:48<24:13,  2.57s/it]
+Step58-GBA-v2 trace:   6%|▌         | 35/600 [01:50<24:01,  2.55s/it]
+Step58-GBA-v2 trace:   6%|▌         | 36/600 [01:53<24:13,  2.58s/it]
+Step58-GBA-v2 trace:   6%|▌         | 37/600 [01:56<24:16,  2.59s/it]
+Step58-GBA-v2 trace:   6%|▋         | 38/600 [01:58<24:13,  2.59s/it]
+Step58-GBA-v2 trace:   6%|▋         | 39/600 [02:01<24:03,  2.57s/it]
+Step58-GBA-v2 trace:   7%|▋         | 40/600 [02:03<23:50,  2.55s/it]
+Step58-GBA-v2 trace:   7%|▋         | 41/600 [02:06<23:38,  2.54s/it]
+Step58-GBA-v2 trace:   7%|▋         | 42/600 [02:08<23:43,  2.55s/it]
+Step58-GBA-v2 trace:   7%|▋         | 43/600 [02:11<24:02,  2.59s/it]
+Step58-GBA-v2 trace:   7%|▋         | 44/600 [02:14<24:17,  2.62s/it]
+Step58-GBA-v2 trace:   8%|▊         | 45/600 [02:16<24:12,  2.62s/it]
+Step58-GBA-v2 trace:   8%|▊         | 46/600 [02:19<23:59,  2.60s/it]
+Step58-GBA-v2 trace:   8%|▊         | 47/600 [02:22<24:04,  2.61s/it]
+Step58-GBA-v2 trace:   8%|▊         | 48/600 [02:24<24:03,  2.62s/it]
+Step58-GBA-v2 trace:   8%|▊         | 49/600 [02:27<23:49,  2.59s/it]
+Step58-GBA-v2 trace:   8%|▊         | 50/600 [02:29<23:39,  2.58s/it]
+Step58-GBA-v2 trace:   8%|▊         | 51/600 [02:32<23:56,  2.62s/it]
+Step58-GBA-v2 trace:   9%|▊         | 52/600 [02:35<25:32,  2.80s/it]
+Step58-GBA-v2 trace:   9%|▉         | 53/600 [02:38<25:21,  2.78s/it]
+Step58-GBA-v2 trace:   9%|▉         | 54/600 [02:41<25:14,  2.77s/it]
+Step58-GBA-v2 trace:   9%|▉         | 55/600 [02:43<24:53,  2.74s/it]
+Step58-GBA-v2 trace:   9%|▉         | 56/600 [02:46<24:46,  2.73s/it]
+Step58-GBA-v2 trace:  10%|▉         | 57/600 [02:49<24:45,  2.74s/it]
+Step58-GBA-v2 trace:  10%|▉         | 58/600 [02:52<24:57,  2.76s/it]
+Step58-GBA-v2 trace:  10%|▉         | 59/600 [02:54<24:58,  2.77s/it]LP validation mean F1: 70.25 +/- 0.22
+LP checkpoint validation F1: 70.2456 (best 0.0000)
+Saved E:\WX\hydro_baseline\outputs\step58_GBA_OFFLINE\computers\r_0.005\seed_1\trace/reduced_graph/hydro/adj_computers_0.005_1.pt
+
+Step58-GBA-v2 trace:  10%|█         | 60/600 [03:09<57:30,  6.39s/it]
+Step58-GBA-v2 trace:  10%|█         | 61/600 [03:12<46:57,  5.23s/it]
+Step58-GBA-v2 trace:  10%|█         | 62/600 [03:14<39:49,  4.44s/it]
+Step58-GBA-v2 trace:  10%|█         | 63/600 [03:17<34:40,  3.87s/it]
+Step58-GBA-v2 trace:  11%|█         | 64/600 [03:19<31:04,  3.48s/it]
+Step58-GBA-v2 trace:  11%|█         | 65/600 [03:22<28:34,  3.20s/it]
+Step58-GBA-v2 trace:  11%|█         | 66/600 [03:25<26:46,  3.01s/it]
+Step58-GBA-v2 trace:  11%|█         | 67/600 [03:27<25:31,  2.87s/it]
+Step58-GBA-v2 trace:  11%|█▏        | 68/600 [03:30<24:31,  2.77s/it]
+Step58-GBA-v2 trace:  12%|█▏        | 69/600 [03:32<24:00,  2.71s/it]
+Step58-GBA-v2 trace:  12%|█▏        | 70/600 [03:35<23:33,  2.67s/it]
+Step58-GBA-v2 trace:  12%|█▏        | 71/600 [03:37<23:09,  2.63s/it]
+Step58-GBA-v2 trace:  12%|█▏        | 72/600 [03:40<22:56,  2.61s/it]
+Step58-GBA-v2 trace:  12%|█▏        | 73/600 [03:43<22:51,  2.60s/it]
+Step58-GBA-v2 trace:  12%|█▏        | 74/600 [03:45<22:35,  2.58s/it]
+Step58-GBA-v2 trace:  12%|█▎        | 75/600 [03:48<22:38,  2.59s/it]
+Step58-GBA-v2 trace:  13%|█▎        | 76/600 [03:50<22:41,  2.60s/it]
+Step58-GBA-v2 trace:  13%|█▎        | 77/600 [03:53<22:23,  2.57s/it]
+Step58-GBA-v2 trace:  13%|█▎        | 78/600 [03:55<22:36,  2.60s/it]
+Step58-GBA-v2 trace:  13%|█▎        | 79/600 [03:58<22:29,  2.59s/it]
+Step58-GBA-v2 trace:  13%|█▎        | 80/600 [04:01<22:33,  2.60s/it]
+Step58-GBA-v2 trace:  14%|█▎        | 81/600 [04:03<22:21,  2.59s/it]
+Step58-GBA-v2 trace:  14%|█▎        | 82/600 [04:06<22:17,  2.58s/it]
+Step58-GBA-v2 trace:  14%|█▍        | 83/600 [04:08<22:04,  2.56s/it]
+Step58-GBA-v2 trace:  14%|█▍        | 84/600 [04:11<22:06,  2.57s/it]
+Step58-GBA-v2 trace:  14%|█▍        | 85/600 [04:13<22:05,  2.57s/it]
+Step58-GBA-v2 trace:  14%|█▍        | 86/600 [04:16<22:00,  2.57s/it]
+Step58-GBA-v2 trace:  14%|█▍        | 87/600 [04:19<21:57,  2.57s/it]
+Step58-GBA-v2 trace:  15%|█▍        | 88/600 [04:21<21:53,  2.56s/it]
+Step58-GBA-v2 trace:  15%|█▍        | 89/600 [04:24<21:57,  2.58s/it]
+Step58-GBA-v2 trace:  15%|█▌        | 90/600 [04:26<21:52,  2.57s/it]
+Step58-GBA-v2 trace:  15%|█▌        | 91/600 [04:29<21:46,  2.57s/it]
+Step58-GBA-v2 trace:  15%|█▌        | 92/600 [04:31<21:43,  2.57s/it]
+Step58-GBA-v2 trace:  16%|█▌        | 93/600 [04:34<21:37,  2.56s/it]
+Step58-GBA-v2 trace:  16%|█▌        | 94/600 [04:37<21:39,  2.57s/it]
+Step58-GBA-v2 trace:  16%|█▌        | 95/600 [04:39<21:42,  2.58s/it]
+Step58-GBA-v2 trace:  16%|█▌        | 96/600 [04:42<21:31,  2.56s/it]
+Step58-GBA-v2 trace:  16%|█▌        | 97/600 [04:44<21:22,  2.55s/it]
+Step58-GBA-v2 trace:  16%|█▋        | 98/600 [04:47<21:13,  2.54s/it]
+Step58-GBA-v2 trace:  16%|█▋        | 99/600 [04:49<21:19,  2.55s/it]
+Step58-GBA-v2 trace:  17%|█▋        | 100/600 [04:52<21:26,  2.57s/it]
+Step58-GBA-v2 trace:  17%|█▋        | 101/600 [04:55<21:35,  2.60s/it]
+Step58-GBA-v2 trace:  17%|█▋        | 102/600 [04:58<22:48,  2.75s/it]
+Step58-GBA-v2 trace:  17%|█▋        | 103/600 [05:00<22:53,  2.76s/it]
+Step58-GBA-v2 trace:  17%|█▋        | 104/600 [05:03<22:45,  2.75s/it]
+Step58-GBA-v2 trace:  18%|█▊        | 105/600 [05:06<22:34,  2.74s/it]
+Step58-GBA-v2 trace:  18%|█▊        | 106/600 [05:09<22:28,  2.73s/it]
+Step58-GBA-v2 trace:  18%|█▊        | 107/600 [05:11<22:30,  2.74s/it]
+Step58-GBA-v2 trace:  18%|█▊        | 108/600 [05:14<22:29,  2.74s/it]
+Step58-GBA-v2 trace:  18%|█▊        | 109/600 [05:17<22:39,  2.77s/it]
+Step58-GBA-v2 trace:  18%|█▊        | 110/600 [05:20<22:26,  2.75s/it]
+Step58-GBA-v2 trace:  18%|█▊        | 111/600 [05:22<22:01,  2.70s/it]
+Step58-GBA-v2 trace:  19%|█▊        | 112/600 [05:25<21:47,  2.68s/it]
+Step58-GBA-v2 trace:  19%|█▉        | 113/600 [05:27<21:30,  2.65s/it]
+Step58-GBA-v2 trace:  19%|█▉        | 114/600 [05:30<21:12,  2.62s/it]
+Step58-GBA-v2 trace:  19%|█▉        | 115/600 [05:33<21:11,  2.62s/it]
+Step58-GBA-v2 trace:  19%|█▉        | 116/600 [05:35<20:55,  2.59s/it]
+Step58-GBA-v2 trace:  20%|█▉        | 117/600 [05:38<20:42,  2.57s/it]
+Step58-GBA-v2 trace:  20%|█▉        | 118/600 [05:40<20:43,  2.58s/it]
+Step58-GBA-v2 trace:  20%|█▉        | 119/600 [05:43<20:42,  2.58s/it]LP validation mean F1: 72.30 +/- 0.47
+LP checkpoint validation F1: 72.2971 (best 70.2456)
+Saved E:\WX\hydro_baseline\outputs\step58_GBA_OFFLINE\computers\r_0.005\seed_1\trace/reduced_graph/hydro/adj_computers_0.005_1.pt
+
+Step58-GBA-v2 trace:  20%|██        | 120/600 [05:57<49:19,  6.17s/it]
+Step58-GBA-v2 trace:  20%|██        | 121/600 [06:00<40:37,  5.09s/it]
+Step58-GBA-v2 trace:  20%|██        | 122/600 [06:02<34:25,  4.32s/it]
+Step58-GBA-v2 trace:  20%|██        | 123/600 [06:05<30:07,  3.79s/it]
+Step58-GBA-v2 trace:  21%|██        | 124/600 [06:08<27:12,  3.43s/it]
+Step58-GBA-v2 trace:  21%|██        | 125/600 [06:10<25:02,  3.16s/it]
+Step58-GBA-v2 trace:  21%|██        | 126/600 [06:13<23:34,  2.98s/it]
+Step58-GBA-v2 trace:  21%|██        | 127/600 [06:15<22:35,  2.87s/it]
+Step58-GBA-v2 trace:  21%|██▏       | 128/600 [06:18<21:56,  2.79s/it]
+Step58-GBA-v2 trace:  22%|██▏       | 129/600 [06:20<21:20,  2.72s/it]
+Step58-GBA-v2 trace:  22%|██▏       | 130/600 [06:23<20:53,  2.67s/it]
+Step58-GBA-v2 trace:  22%|██▏       | 131/600 [06:26<20:29,  2.62s/it]
+Step58-GBA-v2 trace:  22%|██▏       | 132/600 [06:28<20:13,  2.59s/it]
+Step58-GBA-v2 trace:  22%|██▏       | 133/600 [06:31<20:10,  2.59s/it]
+Step58-GBA-v2 trace:  22%|██▏       | 134/600 [06:33<20:01,  2.58s/it]
+Step58-GBA-v2 trace:  22%|██▎       | 135/600 [06:36<20:00,  2.58s/it]
+Step58-GBA-v2 trace:  23%|██▎       | 136/600 [06:38<19:47,  2.56s/it]
+Step58-GBA-v2 trace:  23%|██▎       | 137/600 [06:41<19:47,  2.56s/it]
+Step58-GBA-v2 trace:  23%|██▎       | 138/600 [06:43<19:40,  2.55s/it]
+Step58-GBA-v2 trace:  23%|██▎       | 139/600 [06:46<19:43,  2.57s/it]
+Step58-GBA-v2 trace:  23%|██▎       | 140/600 [06:49<19:44,  2.57s/it]
+Step58-GBA-v2 trace:  24%|██▎       | 141/600 [06:51<19:57,  2.61s/it]
+Step58-GBA-v2 trace:  24%|██▎       | 142/600 [06:54<19:52,  2.60s/it]
+Step58-GBA-v2 trace:  24%|██▍       | 143/600 [06:56<19:50,  2.60s/it]
+Step58-GBA-v2 trace:  24%|██▍       | 144/600 [06:59<19:43,  2.59s/it]
+Step58-GBA-v2 trace:  24%|██▍       | 145/600 [07:02<19:47,  2.61s/it]
+Step58-GBA-v2 trace:  24%|██▍       | 146/600 [07:04<19:32,  2.58s/it]
+Step58-GBA-v2 trace:  24%|██▍       | 147/600 [07:07<19:35,  2.60s/it]
+Step58-GBA-v2 trace:  25%|██▍       | 148/600 [07:09<19:28,  2.59s/it]
+Step58-GBA-v2 trace:  25%|██▍       | 149/600 [07:12<19:24,  2.58s/it]
+Step58-GBA-v2 trace:  25%|██▌       | 150/600 [07:15<19:13,  2.56s/it]
+Step58-GBA-v2 trace:  25%|██▌       | 151/600 [07:17<19:28,  2.60s/it]
+Step58-GBA-v2 trace:  25%|██▌       | 152/600 [07:20<20:40,  2.77s/it]
+Step58-GBA-v2 trace:  26%|██▌       | 153/600 [07:23<20:23,  2.74s/it]
+Step58-GBA-v2 trace:  26%|██▌       | 154/600 [07:26<20:13,  2.72s/it]
+Step58-GBA-v2 trace:  26%|██▌       | 155/600 [07:28<20:07,  2.71s/it]
+Step58-GBA-v2 trace:  26%|██▌       | 156/600 [07:31<20:05,  2.72s/it]
+Step58-GBA-v2 trace:  26%|██▌       | 157/600 [07:34<20:09,  2.73s/it]
+Step58-GBA-v2 trace:  26%|██▋       | 158/600 [07:37<20:14,  2.75s/it]
+Step58-GBA-v2 trace:  26%|██▋       | 159/600 [07:39<20:15,  2.76s/it]
+Step58-GBA-v2 trace:  27%|██▋       | 160/600 [07:42<20:03,  2.73s/it]
+Step58-GBA-v2 trace:  27%|██▋       | 161/600 [07:45<19:43,  2.70s/it]
+Step58-GBA-v2 trace:  27%|██▋       | 162/600 [07:47<19:24,  2.66s/it]
+Step58-GBA-v2 trace:  27%|██▋       | 163/600 [07:50<19:11,  2.63s/it]
+Step58-GBA-v2 trace:  27%|██▋       | 164/600 [07:52<19:03,  2.62s/it]
+Step58-GBA-v2 trace:  28%|██▊       | 165/600 [07:55<18:47,  2.59s/it]
+Step58-GBA-v2 trace:  28%|██▊       | 166/600 [07:58<18:53,  2.61s/it]
+Step58-GBA-v2 trace:  28%|██▊       | 167/600 [08:00<18:52,  2.62s/it]
+Step58-GBA-v2 trace:  28%|██▊       | 168/600 [08:03<18:35,  2.58s/it]
+Step58-GBA-v2 trace:  28%|██▊       | 169/600 [08:05<18:30,  2.58s/it]
+Step58-GBA-v2 trace:  28%|██▊       | 170/600 [08:08<18:24,  2.57s/it]
+Step58-GBA-v2 trace:  28%|██▊       | 171/600 [08:11<18:28,  2.58s/it]
+Step58-GBA-v2 trace:  29%|██▊       | 172/600 [08:13<18:20,  2.57s/it]
+Step58-GBA-v2 trace:  29%|██▉       | 173/600 [08:16<18:07,  2.55s/it]
+Step58-GBA-v2 trace:  29%|██▉       | 174/600 [08:18<18:03,  2.54s/it]
+Step58-GBA-v2 trace:  29%|██▉       | 175/600 [08:21<18:01,  2.55s/it]
+Step58-GBA-v2 trace:  29%|██▉       | 176/600 [08:23<18:02,  2.55s/it]
+Step58-GBA-v2 trace:  30%|██▉       | 177/600 [08:26<18:05,  2.57s/it]
+Step58-GBA-v2 trace:  30%|██▉       | 178/600 [08:28<18:05,  2.57s/it]
+Step58-GBA-v2 trace:  30%|██▉       | 179/600 [08:31<17:58,  2.56s/it]LP validation mean F1: 71.57 +/- 0.65
+LP checkpoint validation F1: 71.5747 (best 72.2971)
+
+Step58-GBA-v2 trace:  30%|███       | 180/600 [08:45<42:32,  6.08s/it]
+Step58-GBA-v2 trace:  30%|███       | 181/600 [08:48<34:57,  5.01s/it]
+Step58-GBA-v2 trace:  30%|███       | 182/600 [08:50<29:46,  4.27s/it]
+Step58-GBA-v2 trace:  30%|███       | 183/600 [08:53<26:17,  3.78s/it]
+Step58-GBA-v2 trace:  31%|███       | 184/600 [08:55<23:35,  3.40s/it]
+Step58-GBA-v2 trace:  31%|███       | 185/600 [08:58<21:48,  3.15s/it]
+Step58-GBA-v2 trace:  31%|███       | 186/600 [09:01<20:32,  2.98s/it]
+Step58-GBA-v2 trace:  31%|███       | 187/600 [09:03<19:30,  2.83s/it]
+Step58-GBA-v2 trace:  31%|███▏      | 188/600 [09:06<18:48,  2.74s/it]
+Step58-GBA-v2 trace:  32%|███▏      | 189/600 [09:08<18:18,  2.67s/it]
+Step58-GBA-v2 trace:  32%|███▏      | 190/600 [09:11<18:00,  2.64s/it]
+Step58-GBA-v2 trace:  32%|███▏      | 191/600 [09:13<17:47,  2.61s/it]
+Step58-GBA-v2 trace:  32%|███▏      | 192/600 [09:16<17:33,  2.58s/it]
+Step58-GBA-v2 trace:  32%|███▏      | 193/600 [09:18<17:29,  2.58s/it]
+Step58-GBA-v2 trace:  32%|███▏      | 194/600 [09:21<17:20,  2.56s/it]
+Step58-GBA-v2 trace:  32%|███▎      | 195/600 [09:23<17:10,  2.54s/it]
+Step58-GBA-v2 trace:  33%|███▎      | 196/600 [09:26<17:14,  2.56s/it]
+Step58-GBA-v2 trace:  33%|███▎      | 197/600 [09:28<17:07,  2.55s/it]
+Step58-GBA-v2 trace:  33%|███▎      | 198/600 [09:31<17:04,  2.55s/it]
+Step58-GBA-v2 trace:  33%|███▎      | 199/600 [09:34<16:58,  2.54s/it]
+Step58-GBA-v2 trace:  33%|███▎      | 200/600 [09:36<16:56,  2.54s/it]
+Step58-GBA-v2 trace:  34%|███▎      | 201/600 [09:39<17:15,  2.60s/it]
+Step58-GBA-v2 trace:  34%|███▎      | 202/600 [09:42<18:10,  2.74s/it]
+Step58-GBA-v2 trace:  34%|███▍      | 203/600 [09:45<18:08,  2.74s/it]
+Step58-GBA-v2 trace:  34%|███▍      | 204/600 [09:47<18:09,  2.75s/it]
+Step58-GBA-v2 trace:  34%|███▍      | 205/600 [09:50<18:00,  2.74s/it]
+Step58-GBA-v2 trace:  34%|███▍      | 206/600 [09:53<18:05,  2.76s/it]
+Step58-GBA-v2 trace:  34%|███▍      | 207/600 [09:56<17:53,  2.73s/it]
+Step58-GBA-v2 trace:  35%|███▍      | 208/600 [09:58<17:48,  2.72s/it]
+Step58-GBA-v2 trace:  35%|███▍      | 209/600 [10:01<17:56,  2.75s/it]
+Step58-GBA-v2 trace:  35%|███▌      | 210/600 [10:04<17:51,  2.75s/it]
+Step58-GBA-v2 trace:  35%|███▌      | 211/600 [10:06<17:20,  2.67s/it]
+Step58-GBA-v2 trace:  35%|███▌      | 212/600 [10:09<17:05,  2.64s/it]
+Step58-GBA-v2 trace:  36%|███▌      | 213/600 [10:11<16:58,  2.63s/it]
+Step58-GBA-v2 trace:  36%|███▌      | 214/600 [10:14<16:57,  2.64s/it]
+Step58-GBA-v2 trace:  36%|███▌      | 215/600 [10:17<16:48,  2.62s/it]
+Step58-GBA-v2 trace:  36%|███▌      | 216/600 [10:19<16:40,  2.60s/it]
+Step58-GBA-v2 trace:  36%|███▌      | 217/600 [10:22<16:29,  2.58s/it]
+Step58-GBA-v2 trace:  36%|███▋      | 218/600 [10:24<16:22,  2.57s/it]
+Step58-GBA-v2 trace:  36%|███▋      | 219/600 [10:27<16:26,  2.59s/it]
+Step58-GBA-v2 trace:  37%|███▋      | 220/600 [10:30<16:19,  2.58s/it]
+Step58-GBA-v2 trace:  37%|███▋      | 221/600 [10:32<16:18,  2.58s/it]
+Step58-GBA-v2 trace:  37%|███▋      | 222/600 [10:35<16:22,  2.60s/it]
+Step58-GBA-v2 trace:  37%|███▋      | 223/600 [10:37<16:29,  2.62s/it]
+Step58-GBA-v2 trace:  37%|███▋      | 224/600 [10:40<16:43,  2.67s/it]
+Step58-GBA-v2 trace:  38%|███▊      | 225/600 [10:43<16:48,  2.69s/it]
+Step58-GBA-v2 trace:  38%|███▊      | 226/600 [10:46<16:52,  2.71s/it]
+Step58-GBA-v2 trace:  38%|███▊      | 227/600 [10:48<16:45,  2.69s/it]
+Step58-GBA-v2 trace:  38%|███▊      | 228/600 [10:51<16:46,  2.71s/it]
+Step58-GBA-v2 trace:  38%|███▊      | 229/600 [10:54<16:52,  2.73s/it]
+Step58-GBA-v2 trace:  38%|███▊      | 230/600 [10:56<16:32,  2.68s/it]
+Step58-GBA-v2 trace:  38%|███▊      | 231/600 [10:59<16:09,  2.63s/it]
+Step58-GBA-v2 trace:  39%|███▊      | 232/600 [11:02<15:57,  2.60s/it]
+Step58-GBA-v2 trace:  39%|███▉      | 233/600 [11:04<15:50,  2.59s/it]
+Step58-GBA-v2 trace:  39%|███▉      | 234/600 [11:07<15:50,  2.60s/it]
+Step58-GBA-v2 trace:  39%|███▉      | 235/600 [11:09<15:38,  2.57s/it]
+Step58-GBA-v2 trace:  39%|███▉      | 236/600 [11:12<15:47,  2.60s/it]
+Step58-GBA-v2 trace:  40%|███▉      | 237/600 [11:14<15:34,  2.58s/it]
+Step58-GBA-v2 trace:  40%|███▉      | 238/600 [11:17<15:35,  2.58s/it]
+Step58-GBA-v2 trace:  40%|███▉      | 239/600 [11:20<15:28,  2.57s/it]LP validation mean F1: 73.06 +/- 1.68
+LP checkpoint validation F1: 73.0639 (best 72.2971)
+Saved E:\WX\hydro_baseline\outputs\step58_GBA_OFFLINE\computers\r_0.005\seed_1\trace/reduced_graph/hydro/adj_computers_0.005_1.pt
+
+Step58-GBA-v2 trace:  40%|████      | 240/600 [11:34<37:16,  6.21s/it]
+Step58-GBA-v2 trace:  40%|████      | 241/600 [11:37<30:31,  5.10s/it]
+Step58-GBA-v2 trace:  40%|████      | 242/600 [11:39<25:56,  4.35s/it]
+Step58-GBA-v2 trace:  40%|████      | 243/600 [11:42<22:42,  3.82s/it]
+Step58-GBA-v2 trace:  41%|████      | 244/600 [11:44<20:19,  3.42s/it]
+Step58-GBA-v2 trace:  41%|████      | 245/600 [11:47<18:43,  3.16s/it]
+Step58-GBA-v2 trace:  41%|████      | 246/600 [11:50<17:37,  2.99s/it]
+Step58-GBA-v2 trace:  41%|████      | 247/600 [11:52<16:55,  2.88s/it]
+Step58-GBA-v2 trace:  41%|████▏     | 248/600 [11:55<16:12,  2.76s/it]
+Step58-GBA-v2 trace:  42%|████▏     | 249/600 [11:57<15:52,  2.71s/it]
+Step58-GBA-v2 trace:  42%|████▏     | 250/600 [12:00<15:30,  2.66s/it]
+Step58-GBA-v2 trace:  42%|████▏     | 251/600 [12:03<15:42,  2.70s/it]
+Step58-GBA-v2 trace:  42%|████▏     | 252/600 [12:06<16:24,  2.83s/it]
+Step58-GBA-v2 trace:  42%|████▏     | 253/600 [12:08<16:12,  2.80s/it]
+Step58-GBA-v2 trace:  42%|████▏     | 254/600 [12:11<15:59,  2.77s/it]
+Step58-GBA-v2 trace:  42%|████▎     | 255/600 [12:14<15:56,  2.77s/it]
+Step58-GBA-v2 trace:  43%|████▎     | 256/600 [12:17<15:51,  2.77s/it]
+Step58-GBA-v2 trace:  43%|████▎     | 257/600 [12:19<15:45,  2.76s/it]
+Step58-GBA-v2 trace:  43%|████▎     | 258/600 [12:22<15:43,  2.76s/it]
+Step58-GBA-v2 trace:  43%|████▎     | 259/600 [12:25<15:41,  2.76s/it]
+Step58-GBA-v2 trace:  43%|████▎     | 260/600 [12:28<15:31,  2.74s/it]
+Step58-GBA-v2 trace:  44%|████▎     | 261/600 [12:30<15:14,  2.70s/it]
+Step58-GBA-v2 trace:  44%|████▎     | 262/600 [12:33<14:51,  2.64s/it]
+Step58-GBA-v2 trace:  44%|████▍     | 263/600 [12:35<14:38,  2.61s/it]
+Step58-GBA-v2 trace:  44%|████▍     | 264/600 [12:38<14:34,  2.60s/it]
+Step58-GBA-v2 trace:  44%|████▍     | 265/600 [12:40<14:28,  2.59s/it]
+Step58-GBA-v2 trace:  44%|████▍     | 266/600 [12:43<14:17,  2.57s/it]
+Step58-GBA-v2 trace:  44%|████▍     | 267/600 [12:45<14:10,  2.55s/it]
+Step58-GBA-v2 trace:  45%|████▍     | 268/600 [12:48<14:01,  2.53s/it]
+Step58-GBA-v2 trace:  45%|████▍     | 269/600 [12:51<14:10,  2.57s/it]
+Step58-GBA-v2 trace:  45%|████▌     | 270/600 [12:53<14:10,  2.58s/it]
+Step58-GBA-v2 trace:  45%|████▌     | 271/600 [12:56<14:10,  2.58s/it]
+Step58-GBA-v2 trace:  45%|████▌     | 272/600 [12:58<14:04,  2.57s/it]
+Step58-GBA-v2 trace:  46%|████▌     | 273/600 [13:01<13:57,  2.56s/it]
+Step58-GBA-v2 trace:  46%|████▌     | 274/600 [13:03<13:51,  2.55s/it]
+Step58-GBA-v2 trace:  46%|████▌     | 275/600 [13:06<13:43,  2.53s/it]
+Step58-GBA-v2 trace:  46%|████▌     | 276/600 [13:09<13:47,  2.55s/it]
+Step58-GBA-v2 trace:  46%|████▌     | 277/600 [13:11<13:50,  2.57s/it]
+Step58-GBA-v2 trace:  46%|████▋     | 278/600 [13:14<13:44,  2.56s/it]
+Step58-GBA-v2 trace:  46%|████▋     | 279/600 [13:16<13:50,  2.59s/it]
+Step58-GBA-v2 trace:  47%|████▋     | 280/600 [13:19<13:47,  2.59s/it]
+Step58-GBA-v2 trace:  47%|████▋     | 281/600 [13:21<13:42,  2.58s/it]
+Step58-GBA-v2 trace:  47%|████▋     | 282/600 [13:24<13:40,  2.58s/it]
+Step58-GBA-v2 trace:  47%|████▋     | 283/600 [13:27<13:36,  2.57s/it]
+Step58-GBA-v2 trace:  47%|████▋     | 284/600 [13:29<13:26,  2.55s/it]
+Step58-GBA-v2 trace:  48%|████▊     | 285/600 [13:32<13:25,  2.56s/it]
+Step58-GBA-v2 trace:  48%|████▊     | 286/600 [13:34<13:21,  2.55s/it]
+Step58-GBA-v2 trace:  48%|████▊     | 287/600 [13:37<13:12,  2.53s/it]
+Step58-GBA-v2 trace:  48%|████▊     | 288/600 [13:39<13:12,  2.54s/it]
+Step58-GBA-v2 trace:  48%|████▊     | 289/600 [13:42<13:16,  2.56s/it]
+Step58-GBA-v2 trace:  48%|████▊     | 290/600 [13:45<13:23,  2.59s/it]
+Step58-GBA-v2 trace:  48%|████▊     | 291/600 [13:47<13:14,  2.57s/it]
+Step58-GBA-v2 trace:  49%|████▊     | 292/600 [13:50<13:07,  2.56s/it]
+Step58-GBA-v2 trace:  49%|████▉     | 293/600 [13:52<13:09,  2.57s/it]
+Step58-GBA-v2 trace:  49%|████▉     | 294/600 [13:55<13:03,  2.56s/it]
+Step58-GBA-v2 trace:  49%|████▉     | 295/600 [13:57<12:59,  2.55s/it]
+Step58-GBA-v2 trace:  49%|████▉     | 296/600 [14:00<13:04,  2.58s/it]
+Step58-GBA-v2 trace:  50%|████▉     | 297/600 [14:02<12:54,  2.56s/it]
+Step58-GBA-v2 trace:  50%|████▉     | 298/600 [14:05<12:51,  2.56s/it]
+Step58-GBA-v2 trace:  50%|████▉     | 299/600 [14:07<12:45,  2.54s/it]LP validation mean F1: 72.83 +/- 0.51
+LP checkpoint validation F1: 72.8330 (best 73.0639)
+
+Step58-GBA-v2 trace:  50%|█████     | 300/600 [14:22<30:02,  6.01s/it]
+Step58-GBA-v2 trace:  50%|█████     | 301/600 [14:24<25:00,  5.02s/it]
+Step58-GBA-v2 trace:  50%|█████     | 302/600 [14:28<22:15,  4.48s/it]
+Step58-GBA-v2 trace:  50%|█████     | 303/600 [14:30<19:33,  3.95s/it]
+Step58-GBA-v2 trace:  51%|█████     | 304/600 [14:33<17:40,  3.58s/it]
+Step58-GBA-v2 trace:  51%|█████     | 305/600 [14:36<16:34,  3.37s/it]
+Step58-GBA-v2 trace:  51%|█████     | 306/600 [14:39<15:43,  3.21s/it]
+Step58-GBA-v2 trace:  51%|█████     | 307/600 [14:41<15:03,  3.08s/it]
+Step58-GBA-v2 trace:  51%|█████▏    | 308/600 [14:44<14:45,  3.03s/it]
+Step58-GBA-v2 trace:  52%|█████▏    | 309/600 [14:47<14:20,  2.96s/it]
+Step58-GBA-v2 trace:  52%|█████▏    | 310/600 [14:50<13:59,  2.89s/it]
+Step58-GBA-v2 trace:  52%|█████▏    | 311/600 [14:53<13:36,  2.83s/it]
+Step58-GBA-v2 trace:  52%|█████▏    | 312/600 [14:55<13:07,  2.74s/it]
+Step58-GBA-v2 trace:  52%|█████▏    | 313/600 [14:58<12:46,  2.67s/it]
+Step58-GBA-v2 trace:  52%|█████▏    | 314/600 [15:00<12:31,  2.63s/it]
+Step58-GBA-v2 trace:  52%|█████▎    | 315/600 [15:03<12:22,  2.61s/it]
+Step58-GBA-v2 trace:  53%|█████▎    | 316/600 [15:05<12:20,  2.61s/it]
+Step58-GBA-v2 trace:  53%|█████▎    | 317/600 [15:08<12:21,  2.62s/it]
+Step58-GBA-v2 trace:  53%|█████▎    | 318/600 [15:10<12:11,  2.59s/it]
+Step58-GBA-v2 trace:  53%|█████▎    | 319/600 [15:13<12:02,  2.57s/it]
+Step58-GBA-v2 trace:  53%|█████▎    | 320/600 [15:16<11:59,  2.57s/it]
+Step58-GBA-v2 trace:  54%|█████▎    | 321/600 [15:18<11:56,  2.57s/it]
+Step58-GBA-v2 trace:  54%|█████▎    | 322/600 [15:21<11:50,  2.56s/it]
+Step58-GBA-v2 trace:  54%|█████▍    | 323/600 [15:23<11:45,  2.55s/it]
+Step58-GBA-v2 trace:  54%|█████▍    | 324/600 [15:26<11:38,  2.53s/it]
+Step58-GBA-v2 trace:  54%|█████▍    | 325/600 [15:28<11:33,  2.52s/it]
+Step58-GBA-v2 trace:  54%|█████▍    | 326/600 [15:31<11:38,  2.55s/it]
+Step58-GBA-v2 trace:  55%|█████▍    | 327/600 [15:33<11:36,  2.55s/it]
+Step58-GBA-v2 trace:  55%|█████▍    | 328/600 [15:36<11:30,  2.54s/it]
+Step58-GBA-v2 trace:  55%|█████▍    | 329/600 [15:38<11:29,  2.54s/it]
+Step58-GBA-v2 trace:  55%|█████▌    | 330/600 [15:41<11:27,  2.55s/it]
+Step58-GBA-v2 trace:  55%|█████▌    | 331/600 [15:43<11:23,  2.54s/it]
+Step58-GBA-v2 trace:  55%|█████▌    | 332/600 [15:46<11:21,  2.54s/it]
+Step58-GBA-v2 trace:  56%|█████▌    | 333/600 [15:49<11:23,  2.56s/it]
+Step58-GBA-v2 trace:  56%|█████▌    | 334/600 [15:51<11:18,  2.55s/it]
+Step58-GBA-v2 trace:  56%|█████▌    | 335/600 [15:54<11:15,  2.55s/it]
+Step58-GBA-v2 trace:  56%|█████▌    | 336/600 [15:56<11:17,  2.57s/it]
+Step58-GBA-v2 trace:  56%|█████▌    | 337/600 [15:59<11:21,  2.59s/it]
+Step58-GBA-v2 trace:  56%|█████▋    | 338/600 [16:02<11:14,  2.57s/it]
+Step58-GBA-v2 trace:  56%|█████▋    | 339/600 [16:04<11:07,  2.56s/it]
+Step58-GBA-v2 trace:  57%|█████▋    | 340/600 [16:07<11:10,  2.58s/it]
+Step58-GBA-v2 trace:  57%|█████▋    | 341/600 [16:09<11:04,  2.56s/it]
+Step58-GBA-v2 trace:  57%|█████▋    | 342/600 [16:12<11:06,  2.58s/it]
+Step58-GBA-v2 trace:  57%|█████▋    | 343/600 [16:14<11:00,  2.57s/it]
+Step58-GBA-v2 trace:  57%|█████▋    | 344/600 [16:17<10:57,  2.57s/it]
+Step58-GBA-v2 trace:  57%|█████▊    | 345/600 [16:19<10:54,  2.57s/it]
+Step58-GBA-v2 trace:  58%|█████▊    | 346/600 [16:22<10:55,  2.58s/it]
+Step58-GBA-v2 trace:  58%|█████▊    | 347/600 [16:25<10:51,  2.57s/it]
+Step58-GBA-v2 trace:  58%|█████▊    | 348/600 [16:27<10:50,  2.58s/it]
+Step58-GBA-v2 trace:  58%|█████▊    | 349/600 [16:30<10:44,  2.57s/it]
+Step58-GBA-v2 trace:  58%|█████▊    | 350/600 [16:32<10:35,  2.54s/it]
+Step58-GBA-v2 trace:  58%|█████▊    | 351/600 [16:35<10:54,  2.63s/it]
+Step58-GBA-v2 trace:  59%|█████▊    | 352/600 [16:38<11:35,  2.80s/it]
+Step58-GBA-v2 trace:  59%|█████▉    | 353/600 [16:41<11:32,  2.80s/it]
+Step58-GBA-v2 trace:  59%|█████▉    | 354/600 [16:44<11:25,  2.79s/it]
+Step58-GBA-v2 trace:  59%|█████▉    | 355/600 [16:47<11:24,  2.79s/it]
+Step58-GBA-v2 trace:  59%|█████▉    | 356/600 [16:50<11:25,  2.81s/it]
+Step58-GBA-v2 trace:  60%|█████▉    | 357/600 [16:52<11:26,  2.83s/it]
+Step58-GBA-v2 trace:  60%|█████▉    | 358/600 [16:55<11:23,  2.83s/it]
+Step58-GBA-v2 trace:  60%|█████▉    | 359/600 [16:58<11:17,  2.81s/it]LP validation mean F1: 72.39 +/- 1.20
+LP checkpoint validation F1: 72.3918 (best 73.0639)
+
+Step58-GBA-v2 trace:  60%|██████    | 360/600 [17:12<24:58,  6.24s/it]
+Step58-GBA-v2 trace:  60%|██████    | 361/600 [17:15<20:34,  5.17s/it]
+Step58-GBA-v2 trace:  60%|██████    | 362/600 [17:17<17:21,  4.38s/it]
+Step58-GBA-v2 trace:  60%|██████    | 363/600 [17:20<15:05,  3.82s/it]
+Step58-GBA-v2 trace:  61%|██████    | 364/600 [17:22<13:26,  3.42s/it]
+Step58-GBA-v2 trace:  61%|██████    | 365/600 [17:25<12:24,  3.17s/it]
+Step58-GBA-v2 trace:  61%|██████    | 366/600 [17:28<11:34,  2.97s/it]
+Step58-GBA-v2 trace:  61%|██████    | 367/600 [17:30<11:02,  2.84s/it]
+Step58-GBA-v2 trace:  61%|██████▏   | 368/600 [17:33<10:37,  2.75s/it]
+Step58-GBA-v2 trace:  62%|██████▏   | 369/600 [17:35<10:20,  2.68s/it]
+Step58-GBA-v2 trace:  62%|██████▏   | 370/600 [17:38<10:06,  2.64s/it]
+Step58-GBA-v2 trace:  62%|██████▏   | 371/600 [17:40<10:00,  2.62s/it]
+Step58-GBA-v2 trace:  62%|██████▏   | 372/600 [17:43<09:54,  2.61s/it]
+Step58-GBA-v2 trace:  62%|██████▏   | 373/600 [17:45<09:50,  2.60s/it]
+Step58-GBA-v2 trace:  62%|██████▏   | 374/600 [17:48<09:43,  2.58s/it]
+Step58-GBA-v2 trace:  62%|██████▎   | 375/600 [17:51<09:42,  2.59s/it]
+Step58-GBA-v2 trace:  63%|██████▎   | 376/600 [17:53<09:39,  2.59s/it]
+Step58-GBA-v2 trace:  63%|██████▎   | 377/600 [17:56<09:32,  2.57s/it]
+Step58-GBA-v2 trace:  63%|██████▎   | 378/600 [17:58<09:29,  2.57s/it]
+Step58-GBA-v2 trace:  63%|██████▎   | 379/600 [18:01<09:26,  2.56s/it]
+Step58-GBA-v2 trace:  63%|██████▎   | 380/600 [18:03<09:19,  2.54s/it]
+Step58-GBA-v2 trace:  64%|██████▎   | 381/600 [18:06<09:18,  2.55s/it]
+Step58-GBA-v2 trace:  64%|██████▎   | 382/600 [18:08<09:17,  2.56s/it]
+Step58-GBA-v2 trace:  64%|██████▍   | 383/600 [18:11<09:14,  2.55s/it]
+Step58-GBA-v2 trace:  64%|██████▍   | 384/600 [18:13<09:10,  2.55s/it]
+Step58-GBA-v2 trace:  64%|██████▍   | 385/600 [18:16<09:07,  2.55s/it]
+Step58-GBA-v2 trace:  64%|██████▍   | 386/600 [18:19<09:06,  2.55s/it]
+Step58-GBA-v2 trace:  64%|██████▍   | 387/600 [18:21<09:03,  2.55s/it]
+Step58-GBA-v2 trace:  65%|██████▍   | 388/600 [18:24<08:57,  2.54s/it]
+Step58-GBA-v2 trace:  65%|██████▍   | 389/600 [18:26<08:59,  2.56s/it]
+Step58-GBA-v2 trace:  65%|██████▌   | 390/600 [18:29<08:53,  2.54s/it]
+Step58-GBA-v2 trace:  65%|██████▌   | 391/600 [18:31<08:52,  2.55s/it]
+Step58-GBA-v2 trace:  65%|██████▌   | 392/600 [18:34<08:45,  2.53s/it]
+Step58-GBA-v2 trace:  66%|██████▌   | 393/600 [18:36<08:42,  2.53s/it]
+Step58-GBA-v2 trace:  66%|██████▌   | 394/600 [18:39<08:42,  2.53s/it]
+Step58-GBA-v2 trace:  66%|██████▌   | 395/600 [18:41<08:42,  2.55s/it]
+Step58-GBA-v2 trace:  66%|██████▌   | 396/600 [18:44<08:44,  2.57s/it]
+Step58-GBA-v2 trace:  66%|██████▌   | 397/600 [18:47<08:42,  2.57s/it]
+Step58-GBA-v2 trace:  66%|██████▋   | 398/600 [18:49<08:39,  2.57s/it]
+Step58-GBA-v2 trace:  66%|██████▋   | 399/600 [18:52<08:38,  2.58s/it]
+Step58-GBA-v2 trace:  67%|██████▋   | 400/600 [18:54<08:35,  2.58s/it]
+Step58-GBA-v2 trace:  67%|██████▋   | 401/600 [18:57<08:45,  2.64s/it]
+Step58-GBA-v2 trace:  67%|██████▋   | 402/600 [19:00<09:11,  2.79s/it]
+Step58-GBA-v2 trace:  67%|██████▋   | 403/600 [19:03<09:15,  2.82s/it]
+Step58-GBA-v2 trace:  67%|██████▋   | 404/600 [19:06<09:13,  2.82s/it]
+Step58-GBA-v2 trace:  68%|██████▊   | 405/600 [19:09<09:07,  2.81s/it]
+Step58-GBA-v2 trace:  68%|██████▊   | 406/600 [19:12<09:05,  2.81s/it]
+Step58-GBA-v2 trace:  68%|██████▊   | 407/600 [19:15<09:07,  2.84s/it]
+Step58-GBA-v2 trace:  68%|██████▊   | 408/600 [19:17<09:03,  2.83s/it]
+Step58-GBA-v2 trace:  68%|██████▊   | 409/600 [19:20<08:57,  2.81s/it]
+Step58-GBA-v2 trace:  68%|██████▊   | 410/600 [19:23<08:52,  2.80s/it]
+Step58-GBA-v2 trace:  68%|██████▊   | 411/600 [19:25<08:34,  2.72s/it]
+Step58-GBA-v2 trace:  69%|██████▊   | 412/600 [19:28<08:21,  2.67s/it]
+Step58-GBA-v2 trace:  69%|██████▉   | 413/600 [19:30<08:11,  2.63s/it]
+Step58-GBA-v2 trace:  69%|██████▉   | 414/600 [19:33<08:06,  2.61s/it]
+Step58-GBA-v2 trace:  69%|██████▉   | 415/600 [19:36<07:58,  2.59s/it]
+Step58-GBA-v2 trace:  69%|██████▉   | 416/600 [19:38<07:55,  2.58s/it]
+Step58-GBA-v2 trace:  70%|██████▉   | 417/600 [19:41<07:49,  2.56s/it]
+Step58-GBA-v2 trace:  70%|██████▉   | 418/600 [19:43<07:45,  2.55s/it]
+Step58-GBA-v2 trace:  70%|██████▉   | 419/600 [19:46<07:41,  2.55s/it]LP validation mean F1: 72.47 +/- 0.33
+LP checkpoint validation F1: 72.4665 (best 73.0639)
+
+Step58-GBA-v2 trace:  70%|███████   | 420/600 [20:00<18:10,  6.06s/it]
+Step58-GBA-v2 trace:  70%|███████   | 421/600 [20:03<14:53,  4.99s/it]
+Step58-GBA-v2 trace:  70%|███████   | 422/600 [20:05<12:36,  4.25s/it]
+Step58-GBA-v2 trace:  70%|███████   | 423/600 [20:08<11:00,  3.73s/it]
+Step58-GBA-v2 trace:  71%|███████   | 424/600 [20:10<09:55,  3.38s/it]
+Step58-GBA-v2 trace:  71%|███████   | 425/600 [20:13<09:08,  3.13s/it]
+Step58-GBA-v2 trace:  71%|███████   | 426/600 [20:15<08:35,  2.96s/it]
+Step58-GBA-v2 trace:  71%|███████   | 427/600 [20:18<08:11,  2.84s/it]
+Step58-GBA-v2 trace:  71%|███████▏  | 428/600 [20:20<07:53,  2.75s/it]
+Step58-GBA-v2 trace:  72%|███████▏  | 429/600 [20:23<07:41,  2.70s/it]
+Step58-GBA-v2 trace:  72%|███████▏  | 430/600 [20:26<07:35,  2.68s/it]
+Step58-GBA-v2 trace:  72%|███████▏  | 431/600 [20:28<07:29,  2.66s/it]
+Step58-GBA-v2 trace:  72%|███████▏  | 432/600 [20:31<07:19,  2.62s/it]
+Step58-GBA-v2 trace:  72%|███████▏  | 433/600 [20:33<07:11,  2.58s/it]
+Step58-GBA-v2 trace:  72%|███████▏  | 434/600 [20:36<07:09,  2.59s/it]
+Step58-GBA-v2 trace:  72%|███████▎  | 435/600 [20:38<07:03,  2.57s/it]
+Step58-GBA-v2 trace:  73%|███████▎  | 436/600 [20:41<06:59,  2.56s/it]
+Step58-GBA-v2 trace:  73%|███████▎  | 437/600 [20:43<06:55,  2.55s/it]
+Step58-GBA-v2 trace:  73%|███████▎  | 438/600 [20:46<06:52,  2.55s/it]
+Step58-GBA-v2 trace:  73%|███████▎  | 439/600 [20:48<06:48,  2.54s/it]
+Step58-GBA-v2 trace:  73%|███████▎  | 440/600 [20:51<06:47,  2.55s/it]
+Step58-GBA-v2 trace:  74%|███████▎  | 441/600 [20:54<06:45,  2.55s/it]
+Step58-GBA-v2 trace:  74%|███████▎  | 442/600 [20:56<06:44,  2.56s/it]
+Step58-GBA-v2 trace:  74%|███████▍  | 443/600 [20:59<06:42,  2.57s/it]
+Step58-GBA-v2 trace:  74%|███████▍  | 444/600 [21:01<06:37,  2.55s/it]
+Step58-GBA-v2 trace:  74%|███████▍  | 445/600 [21:04<06:36,  2.56s/it]
+Step58-GBA-v2 trace:  74%|███████▍  | 446/600 [21:06<06:31,  2.54s/it]
+Step58-GBA-v2 trace:  74%|███████▍  | 447/600 [21:09<06:29,  2.54s/it]
+Step58-GBA-v2 trace:  75%|███████▍  | 448/600 [21:11<06:27,  2.55s/it]
+Step58-GBA-v2 trace:  75%|███████▍  | 449/600 [21:14<06:28,  2.57s/it]
+Step58-GBA-v2 trace:  75%|███████▌  | 450/600 [21:17<06:26,  2.57s/it]
+Step58-GBA-v2 trace:  75%|███████▌  | 451/600 [21:19<06:32,  2.64s/it]
+Step58-GBA-v2 trace:  75%|███████▌  | 452/600 [21:23<06:54,  2.80s/it]
+Step58-GBA-v2 trace:  76%|███████▌  | 453/600 [21:25<06:50,  2.80s/it]
+Step58-GBA-v2 trace:  76%|███████▌  | 454/600 [21:28<06:46,  2.79s/it]
+Step58-GBA-v2 trace:  76%|███████▌  | 455/600 [21:31<06:43,  2.78s/it]
+Step58-GBA-v2 trace:  76%|███████▌  | 456/600 [21:34<06:39,  2.77s/it]
+Step58-GBA-v2 trace:  76%|███████▌  | 457/600 [21:36<06:38,  2.79s/it]
+Step58-GBA-v2 trace:  76%|███████▋  | 458/600 [21:39<06:36,  2.79s/it]
+Step58-GBA-v2 trace:  76%|███████▋  | 459/600 [21:42<06:35,  2.81s/it]
+Step58-GBA-v2 trace:  77%|███████▋  | 460/600 [21:45<06:32,  2.80s/it]
+Step58-GBA-v2 trace:  77%|███████▋  | 461/600 [21:47<06:17,  2.72s/it]
+Step58-GBA-v2 trace:  77%|███████▋  | 462/600 [21:50<06:08,  2.67s/it]
+Step58-GBA-v2 trace:  77%|███████▋  | 463/600 [21:53<06:01,  2.64s/it]
+Step58-GBA-v2 trace:  77%|███████▋  | 464/600 [21:55<05:56,  2.62s/it]
+Step58-GBA-v2 trace:  78%|███████▊  | 465/600 [21:58<05:52,  2.61s/it]
+Step58-GBA-v2 trace:  78%|███████▊  | 466/600 [22:00<05:46,  2.58s/it]
+Step58-GBA-v2 trace:  78%|███████▊  | 467/600 [22:03<05:44,  2.59s/it]
+Step58-GBA-v2 trace:  78%|███████▊  | 468/600 [22:05<05:40,  2.58s/it]
+Step58-GBA-v2 trace:  78%|███████▊  | 469/600 [22:08<05:36,  2.57s/it]
+Step58-GBA-v2 trace:  78%|███████▊  | 470/600 [22:11<05:36,  2.59s/it]
+Step58-GBA-v2 trace:  78%|███████▊  | 471/600 [22:13<05:40,  2.64s/it]
+Step58-GBA-v2 trace:  79%|███████▊  | 472/600 [22:16<05:35,  2.62s/it]
+Step58-GBA-v2 trace:  79%|███████▉  | 473/600 [22:19<05:32,  2.62s/it]
+Step58-GBA-v2 trace:  79%|███████▉  | 474/600 [22:21<05:28,  2.60s/it]
+Step58-GBA-v2 trace:  79%|███████▉  | 475/600 [22:24<05:22,  2.58s/it]
+Step58-GBA-v2 trace:  79%|███████▉  | 476/600 [22:26<05:21,  2.59s/it]
+Step58-GBA-v2 trace:  80%|███████▉  | 477/600 [22:29<05:17,  2.58s/it]
+Step58-GBA-v2 trace:  80%|███████▉  | 478/600 [22:31<05:12,  2.57s/it]
+Step58-GBA-v2 trace:  80%|███████▉  | 479/600 [22:34<05:08,  2.55s/it]LP validation mean F1: 72.22 +/- 1.17
+LP checkpoint validation F1: 72.2240 (best 73.0639)
+
+Step58-GBA-v2 trace:  80%|████████  | 480/600 [22:48<12:01,  6.01s/it]
+Step58-GBA-v2 trace:  80%|████████  | 481/600 [22:50<09:50,  4.96s/it]
+Step58-GBA-v2 trace:  80%|████████  | 482/600 [22:53<08:21,  4.25s/it]
+Step58-GBA-v2 trace:  80%|████████  | 483/600 [22:56<07:17,  3.74s/it]
+Step58-GBA-v2 trace:  81%|████████  | 484/600 [22:58<06:31,  3.38s/it]
+Step58-GBA-v2 trace:  81%|████████  | 485/600 [23:01<05:59,  3.13s/it]
+Step58-GBA-v2 trace:  81%|████████  | 486/600 [23:03<05:36,  2.95s/it]
+Step58-GBA-v2 trace:  81%|████████  | 487/600 [23:06<05:20,  2.83s/it]
+Step58-GBA-v2 trace:  81%|████████▏ | 488/600 [23:08<05:08,  2.75s/it]
+Step58-GBA-v2 trace:  82%|████████▏ | 489/600 [23:11<04:59,  2.70s/it]
+Step58-GBA-v2 trace:  82%|████████▏ | 490/600 [23:13<04:51,  2.65s/it]
+Step58-GBA-v2 trace:  82%|████████▏ | 491/600 [23:16<04:46,  2.63s/it]
+Step58-GBA-v2 trace:  82%|████████▏ | 492/600 [23:19<04:42,  2.62s/it]
+Step58-GBA-v2 trace:  82%|████████▏ | 493/600 [23:21<04:38,  2.60s/it]
+Step58-GBA-v2 trace:  82%|████████▏ | 494/600 [23:24<04:32,  2.57s/it]
+Step58-GBA-v2 trace:  82%|████████▎ | 495/600 [23:26<04:32,  2.59s/it]
+Step58-GBA-v2 trace:  83%|████████▎ | 496/600 [23:29<04:28,  2.59s/it]
+Step58-GBA-v2 trace:  83%|████████▎ | 497/600 [23:31<04:24,  2.57s/it]
+Step58-GBA-v2 trace:  83%|████████▎ | 498/600 [23:34<04:21,  2.56s/it]
+Step58-GBA-v2 trace:  83%|████████▎ | 499/600 [23:37<04:19,  2.57s/it]
+Step58-GBA-v2 trace:  83%|████████▎ | 500/600 [23:39<04:14,  2.55s/it]
+Step58-GBA-v2 trace:  84%|████████▎ | 501/600 [23:42<04:19,  2.62s/it]
+Step58-GBA-v2 trace:  84%|████████▎ | 502/600 [23:45<04:32,  2.78s/it]
+Step58-GBA-v2 trace:  84%|████████▍ | 503/600 [23:48<04:29,  2.78s/it]
+Step58-GBA-v2 trace:  84%|████████▍ | 504/600 [23:51<04:26,  2.77s/it]
+Step58-GBA-v2 trace:  84%|████████▍ | 505/600 [23:53<04:26,  2.81s/it]
+Step58-GBA-v2 trace:  84%|████████▍ | 506/600 [23:56<04:25,  2.82s/it]
+Step58-GBA-v2 trace:  84%|████████▍ | 507/600 [23:59<04:22,  2.82s/it]
+Step58-GBA-v2 trace:  85%|████████▍ | 508/600 [24:02<04:19,  2.83s/it]
+Step58-GBA-v2 trace:  85%|████████▍ | 509/600 [24:05<04:15,  2.81s/it]
+Step58-GBA-v2 trace:  85%|████████▌ | 510/600 [24:07<04:11,  2.80s/it]
+Step58-GBA-v2 trace:  85%|████████▌ | 511/600 [24:10<04:03,  2.74s/it]
+Step58-GBA-v2 trace:  85%|████████▌ | 512/600 [24:13<03:54,  2.67s/it]
+Step58-GBA-v2 trace:  86%|████████▌ | 513/600 [24:15<03:48,  2.63s/it]
+Step58-GBA-v2 trace:  86%|████████▌ | 514/600 [24:18<03:43,  2.60s/it]
+Step58-GBA-v2 trace:  86%|████████▌ | 515/600 [24:20<03:41,  2.60s/it]
+Step58-GBA-v2 trace:  86%|████████▌ | 516/600 [24:23<03:38,  2.60s/it]
+Step58-GBA-v2 trace:  86%|████████▌ | 517/600 [24:25<03:35,  2.60s/it]
+Step58-GBA-v2 trace:  86%|████████▋ | 518/600 [24:28<03:33,  2.61s/it]
+Step58-GBA-v2 trace:  86%|████████▋ | 519/600 [24:31<03:30,  2.60s/it]
+Step58-GBA-v2 trace:  87%|████████▋ | 520/600 [24:33<03:26,  2.58s/it]
+Step58-GBA-v2 trace:  87%|████████▋ | 521/600 [24:36<03:22,  2.56s/it]
+Step58-GBA-v2 trace:  87%|████████▋ | 522/600 [24:38<03:20,  2.57s/it]
+Step58-GBA-v2 trace:  87%|████████▋ | 523/600 [24:41<03:17,  2.57s/it]
+Step58-GBA-v2 trace:  87%|████████▋ | 524/600 [24:43<03:14,  2.56s/it]
+Step58-GBA-v2 trace:  88%|████████▊ | 525/600 [24:46<03:10,  2.54s/it]
+Step58-GBA-v2 trace:  88%|████████▊ | 526/600 [24:49<03:09,  2.56s/it]
+Step58-GBA-v2 trace:  88%|████████▊ | 527/600 [24:51<03:08,  2.58s/it]
+Step58-GBA-v2 trace:  88%|████████▊ | 528/600 [24:54<03:07,  2.60s/it]
+Step58-GBA-v2 trace:  88%|████████▊ | 529/600 [24:56<03:03,  2.58s/it]
+Step58-GBA-v2 trace:  88%|████████▊ | 530/600 [24:59<03:00,  2.57s/it]
+Step58-GBA-v2 trace:  88%|████████▊ | 531/600 [25:01<02:57,  2.57s/it]
+Step58-GBA-v2 trace:  89%|████████▊ | 532/600 [25:04<02:54,  2.57s/it]
+Step58-GBA-v2 trace:  89%|████████▉ | 533/600 [25:07<02:50,  2.55s/it]
+Step58-GBA-v2 trace:  89%|████████▉ | 534/600 [25:09<02:47,  2.54s/it]
+Step58-GBA-v2 trace:  89%|████████▉ | 535/600 [25:12<02:44,  2.54s/it]
+Step58-GBA-v2 trace:  89%|████████▉ | 536/600 [25:14<02:41,  2.52s/it]
+Step58-GBA-v2 trace:  90%|████████▉ | 537/600 [25:17<02:40,  2.54s/it]
+Step58-GBA-v2 trace:  90%|████████▉ | 538/600 [25:19<02:37,  2.54s/it]
+Step58-GBA-v2 trace:  90%|████████▉ | 539/600 [25:22<02:36,  2.56s/it]LP validation mean F1: 72.23 +/- 0.45
+LP checkpoint validation F1: 72.2293 (best 73.0639)
+
+Step58-GBA-v2 trace:  90%|█████████ | 540/600 [25:36<06:01,  6.02s/it]
+Step58-GBA-v2 trace:  90%|█████████ | 541/600 [25:39<04:55,  5.01s/it]
+Step58-GBA-v2 trace:  90%|█████████ | 542/600 [25:41<04:08,  4.29s/it]
+Step58-GBA-v2 trace:  90%|█████████ | 543/600 [25:44<03:35,  3.78s/it]
+Step58-GBA-v2 trace:  91%|█████████ | 544/600 [25:46<03:11,  3.42s/it]
+Step58-GBA-v2 trace:  91%|█████████ | 545/600 [25:49<02:53,  3.16s/it]
+Step58-GBA-v2 trace:  91%|█████████ | 546/600 [25:51<02:41,  2.99s/it]
+Step58-GBA-v2 trace:  91%|█████████ | 547/600 [25:54<02:31,  2.86s/it]
+Step58-GBA-v2 trace:  91%|█████████▏| 548/600 [25:57<02:23,  2.75s/it]
+Step58-GBA-v2 trace:  92%|█████████▏| 549/600 [25:59<02:17,  2.69s/it]
+Step58-GBA-v2 trace:  92%|█████████▏| 550/600 [26:02<02:12,  2.64s/it]
+Step58-GBA-v2 trace:  92%|█████████▏| 551/600 [26:04<02:11,  2.69s/it]
+Step58-GBA-v2 trace:  92%|█████████▏| 552/600 [26:08<02:15,  2.83s/it]
+Step58-GBA-v2 trace:  92%|█████████▏| 553/600 [26:10<02:12,  2.82s/it]
+Step58-GBA-v2 trace:  92%|█████████▏| 554/600 [26:13<02:09,  2.82s/it]
+Step58-GBA-v2 trace:  92%|█████████▎| 555/600 [26:16<02:06,  2.81s/it]
+Step58-GBA-v2 trace:  93%|█████████▎| 556/600 [26:19<02:04,  2.83s/it]
+Step58-GBA-v2 trace:  93%|█████████▎| 557/600 [26:22<02:01,  2.83s/it]
+Step58-GBA-v2 trace:  93%|█████████▎| 558/600 [26:24<01:58,  2.82s/it]
+Step58-GBA-v2 trace:  93%|█████████▎| 559/600 [26:27<01:55,  2.83s/it]
+Step58-GBA-v2 trace:  93%|█████████▎| 560/600 [26:30<01:53,  2.83s/it]
+Step58-GBA-v2 trace:  94%|█████████▎| 561/600 [26:33<01:46,  2.74s/it]
+Step58-GBA-v2 trace:  94%|█████████▎| 562/600 [26:35<01:41,  2.66s/it]
+Step58-GBA-v2 trace:  94%|█████████▍| 563/600 [26:38<01:37,  2.64s/it]
+Step58-GBA-v2 trace:  94%|█████████▍| 564/600 [26:40<01:34,  2.61s/it]
+Step58-GBA-v2 trace:  94%|█████████▍| 565/600 [26:43<01:30,  2.58s/it]
+Step58-GBA-v2 trace:  94%|█████████▍| 566/600 [26:45<01:27,  2.57s/it]
+Step58-GBA-v2 trace:  94%|█████████▍| 567/600 [26:48<01:24,  2.57s/it]
+Step58-GBA-v2 trace:  95%|█████████▍| 568/600 [26:50<01:22,  2.57s/it]
+Step58-GBA-v2 trace:  95%|█████████▍| 569/600 [26:53<01:19,  2.56s/it]
+Step58-GBA-v2 trace:  95%|█████████▌| 570/600 [26:56<01:16,  2.54s/it]
+Step58-GBA-v2 trace:  95%|█████████▌| 571/600 [26:58<01:13,  2.53s/it]
+Step58-GBA-v2 trace:  95%|█████████▌| 572/600 [27:01<01:11,  2.54s/it]
+Step58-GBA-v2 trace:  96%|█████████▌| 573/600 [27:03<01:08,  2.55s/it]
+Step58-GBA-v2 trace:  96%|█████████▌| 574/600 [27:06<01:06,  2.56s/it]
+Step58-GBA-v2 trace:  96%|█████████▌| 575/600 [27:08<01:03,  2.55s/it]
+Step58-GBA-v2 trace:  96%|█████████▌| 576/600 [27:11<01:01,  2.56s/it]
+Step58-GBA-v2 trace:  96%|█████████▌| 577/600 [27:13<00:58,  2.56s/it]
+Step58-GBA-v2 trace:  96%|█████████▋| 578/600 [27:16<00:55,  2.54s/it]
+Step58-GBA-v2 trace:  96%|█████████▋| 579/600 [27:18<00:53,  2.54s/it]
+Step58-GBA-v2 trace:  97%|█████████▋| 580/600 [27:21<00:51,  2.57s/it]
+Step58-GBA-v2 trace:  97%|█████████▋| 581/600 [27:24<00:48,  2.55s/it]
+Step58-GBA-v2 trace:  97%|█████████▋| 582/600 [27:26<00:45,  2.54s/it]
+Step58-GBA-v2 trace:  97%|█████████▋| 583/600 [27:29<00:43,  2.56s/it]
+Step58-GBA-v2 trace:  97%|█████████▋| 584/600 [27:31<00:40,  2.55s/it]
+Step58-GBA-v2 trace:  98%|█████████▊| 585/600 [27:34<00:38,  2.55s/it]
+Step58-GBA-v2 trace:  98%|█████████▊| 586/600 [27:36<00:35,  2.55s/it]
+Step58-GBA-v2 trace:  98%|█████████▊| 587/600 [27:39<00:33,  2.56s/it]
+Step58-GBA-v2 trace:  98%|█████████▊| 588/600 [27:41<00:30,  2.57s/it]
+Step58-GBA-v2 trace:  98%|█████████▊| 589/600 [27:44<00:28,  2.57s/it]
+Step58-GBA-v2 trace:  98%|█████████▊| 590/600 [27:47<00:25,  2.57s/it]
+Step58-GBA-v2 trace:  98%|█████████▊| 591/600 [27:49<00:23,  2.56s/it]
+Step58-GBA-v2 trace:  99%|█████████▊| 592/600 [27:52<00:20,  2.56s/it]
+Step58-GBA-v2 trace:  99%|█████████▉| 593/600 [27:54<00:17,  2.55s/it]
+Step58-GBA-v2 trace:  99%|█████████▉| 594/600 [27:57<00:15,  2.57s/it]
+Step58-GBA-v2 trace:  99%|█████████▉| 595/600 [27:59<00:12,  2.54s/it]
+Step58-GBA-v2 trace:  99%|█████████▉| 596/600 [28:02<00:10,  2.53s/it]
+Step58-GBA-v2 trace: 100%|█████████▉| 597/600 [28:04<00:07,  2.54s/it]
+Step58-GBA-v2 trace: 100%|█████████▉| 598/600 [28:07<00:05,  2.55s/it]
+Step58-GBA-v2 trace: 100%|█████████▉| 599/600 [28:10<00:02,  2.55s/it]LP validation mean F1: 72.05 +/- 0.57
+LP checkpoint validation F1: 72.0456 (best 73.0639)
+
+Step58-GBA-v2 trace: 100%|██████████| 600/600 [28:23<00:00,  5.98s/it]
+Step58-GBA-v2 trace: 100%|██████████| 600/600 [28:23<00:00,  2.84s/it]
+LP run 1/10: threshold=0.0446234, epoch=100, val_f1=75.02, test_f1=75.37
+LP run 2/10: threshold=0.0442085, epoch=100, val_f1=73.25, test_f1=72.74
+LP run 3/10: threshold=0.0446234, epoch=100, val_f1=70.93, test_f1=70.89
+LP run 4/10: threshold=0.0446234, epoch=100, val_f1=74.52, test_f1=74.25
+LP run 5/10: threshold=0.937205, epoch=100, val_f1=72.57, test_f1=72.68
+LP run 6/10: threshold=0.0442085, epoch=70, val_f1=72.63, test_f1=72.75
+LP run 7/10: threshold=0.0446234, epoch=100, val_f1=73.94, test_f1=73.91
+LP run 8/10: threshold=0.0446234, epoch=100, val_f1=74.31, test_f1=74.50
+LP run 9/10: threshold=0.0446234, epoch=100, val_f1=74.03, test_f1=74.06
+LP run 10/10: threshold=0.0446234, epoch=100, val_f1=73.97, test_f1=74.18
+LP test mean F1: 73.53 +/- 1.21 (validation 73.52 +/- 1.14)
+[0m

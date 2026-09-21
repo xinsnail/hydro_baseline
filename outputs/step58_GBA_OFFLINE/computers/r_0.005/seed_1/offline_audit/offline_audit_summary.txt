@@ -1,0 +1,10 @@
+Step58-GBA-v2 offline gradient audit complete
+training_process_modified=false
+snapshots=24
+finite_snapshots=24
+ratio_mean=0.01832976
+ratio_median=0.01354501
+cosine_mean=0.18677381
+cosine_median=0.06368287
+conflict_fraction=0.41666667
+max_replay_raw_adjacency_relative_error=0.00000000e+00

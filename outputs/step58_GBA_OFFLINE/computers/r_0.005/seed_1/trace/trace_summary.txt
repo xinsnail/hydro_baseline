@@ -1,0 +1,7 @@
+Step58-GBA-v2 snapshot-only CA-LGM complete
+online_gradient_audit=false
+extra_autograd_grad_calls=0
+epochs=600
+lp_weight=0.05000000
+best_validation_f1=0.73063879
+snapshots=26
